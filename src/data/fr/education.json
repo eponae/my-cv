@@ -1,0 +1,22 @@
+{
+  "education": {
+    "languages": {
+      "title": "Langues",
+      "list": ["Anglais professionnel", "Français langue natale"]
+    },
+    "certificates": [
+      {
+        "title": "Formations chez Zenika",
+        "list": ["Méthodes agiles", "Git", "React JS"]
+      },
+      {
+        "title": "TOEIC 890 en 2014"
+      },
+      {
+        "title": "Baccalauréat S avec mention en 2010"
+      }
+    ],
+    "summary": "Ingénieure en Informatique diplômée de l'ESIEA Paris en 2015",
+    "title": "Formation"
+  }
+}

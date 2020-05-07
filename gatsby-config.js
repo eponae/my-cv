@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Alice Rimassa CV`,
-    description: `Alice Rimassa Curriculum Vitae Développeuse Web Front`,
+    title: `CV Alice R`,
+    description: `Curriculum Vitae - Alice Rimassa - Développeuse Web Front`,
     author: `@eponae`,
   },
   plugins: [
@@ -12,6 +12,13 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/data/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     `gatsby-transformer-json`,

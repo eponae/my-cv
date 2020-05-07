@@ -13,8 +13,11 @@ import Header from './header';
 
 const LayoutWrapper = styled.div`
   margin: 0 auto;
-  maxwidth: 960;
-  padding: 0 1.0875rem 1.45rem;
+  max-width: 1280px;
+  padding: 48px 48px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 `;
 
 const Layout: FC = ({ children }) => {
@@ -34,7 +37,7 @@ const Layout: FC = ({ children }) => {
       <LayoutWrapper>
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()}, Créé avec
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>

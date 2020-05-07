@@ -1,12 +1,12 @@
-**Created with Gatsby**
+## Created with Gatsby
 
     https://www.gatsbyjs.org/
 
-**Deployed with**
+## Deployed with
 
     https://vercel.com/
 
-**Available at**
+## Available at
 
     https://eponae.fr
 

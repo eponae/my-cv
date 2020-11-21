@@ -1,4 +1,3 @@
-import { Link } from 'gatsby';
 import React, { FC } from 'react';
 
 type Props = {

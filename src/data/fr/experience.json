@@ -13,7 +13,7 @@
           "date": "Janvier 2018 à Aujourd'hui * Plus de 2 ans",
           "tasks": [
             "Implémenter des fonctionnalités pour l'interface du système de recommandations",
-            "Élaborer en équipe et diffuser les bonnes pratiques  : architecture, tests et standards de la communauté React et Javascript",
+            "Élaborer en équipe et diffuser les bonnes pratiques : architecture, tests et standards de la communauté React et Javascript",
             "Participer aux migrations : Angular vers React, Sass BEM vers CSS modules et Flow vers Typescript",
             "Faciliter la coordination entre les développeurs et les designers",
             "Participer à l’implémentation du design system",
@@ -91,11 +91,11 @@
       "experience": [
         {
           "job": "Stagiaire",
-          "date": "Avril à Août 2014 * 5 mois",
+          "date": "5 mois",
           "tasks": [
             "Développement d'un logiciel de mesure d'audience en temps réel sur PC"
           ],
-          "environment": ["Windows", "C++", "Visual Studio"]
+          "environment": ["Windows", "C++"]
         }
       ]
     },
@@ -107,7 +107,7 @@
       "experience": [
         {
           "job": "Stagiaire",
-          "date": "Juillet à Août 2013 * 2 mois",
+          "date": "2 mois",
           "tasks": [
             "Tests utilisateurs et tests unitaires en JavaScript sur des interfaces pour la télévision au Pays de Galles"
           ]
@@ -123,43 +123,23 @@
       "experience": [
         {
           "job": "Responsable",
-          "date": "Avril 2013 à 2014 * 1 an",
+          "date": "1 an",
           "tasks": [
-            "Gestion administrative pour la DTRE (association robotique)"
-          ]
-        },
-        {
-          "job": "Membre",
-          "date": "Avril 2013 à 2014 * 1 an",
-          "tasks": [
-            "Organisation d'événements pour ESIEA Events (association étudiante)"
+            "Gestion administrative et organisation d'événements pour une association étudiante"
           ]
         }
       ]
     },
     "association": {
       "company": {
-        "name": "Action contre la faim"
+        "name": "Associations : Action contre la faim et autres"
       },
       "experience": [
         {
           "job": "Membre",
-          "date": "Septembre 2006 à 2007 * 1 an",
+          "date": "1 an",
           "tasks": [
-            "Participation à des actions de collecte de fonds (dépôt de boites chez les commerçants, vide grenier)"
-          ]
-        }
-      ]
-    },
-    "blank": {
-      "company": {
-        "name": "Association _blank"
-      },
-      "experience": [
-        {
-          "job": "Membre",
-          "date": "Année scolaire 2018 - 2019 * Quelques mois",
-          "tasks": [
+            "Participation à des actions de collecte de fonds",
             "Mentorat pour des jeunes en reconversion professionnelle vers le développement Web"
           ]
         }

@@ -1,3 +1,12 @@
 {
-  "skills": ["React JS", "CSS", "HTML", "Javascript", "Kanban", "Tests", "REST"]
+  "skills": [
+    "React JS",
+    "CSS",
+    "HTML",
+    "Javascript",
+    "Git",
+    "Kanban",
+    "Tests",
+    "REST"
+  ]
 }

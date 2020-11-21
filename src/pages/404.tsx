@@ -5,7 +5,7 @@ import SEO from '../components/seo';
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Page non trouvée" />
+    <SEO />
     <h1>Cette page n'existe pas</h1>
   </Layout>
 );

@@ -1,22 +1,28 @@
 import React, { FC } from 'react';
+import styled from 'styled-components';
 import { CompanyType } from '../types/types';
 
 type Props = {
   company: CompanyType;
 };
 
+const CompanyName = styled.a`
+  font-size: ${({ theme }) => theme.h2FontSize};
+  color: ${({ theme }) => theme.colors.brown};
+`;
+
 const Company: FC<Props> = ({ company }) => {
   const { company: companyDescription, experiences, id } = company;
   return (
     <div>
-      <a
+      <CompanyName
         href={companyDescription.link}
         target="_blank"
         rel="noreferrer noopener"
       >
         {companyDescription.name}
-      </a>
-      <div>{companyDescription.description}</div>
+      </CompanyName>
+      <h3>{companyDescription.description}</h3>
       <ul>
         {experiences.map((experience, expIndex) => (
           <li key={`${id}-exp-${expIndex}`}>
@@ -27,11 +33,7 @@ const Company: FC<Props> = ({ company }) => {
                 <li key={`${id}-task-${expIndex}-${taskIndex}`}>{task}</li>
               ))}
             </ul>
-            <ul>
-              {experience.environment.map((env, envIndex) => (
-                <li key={`${id}-env-${expIndex}-${envIndex}`}>{env}</li>
-              ))}
-            </ul>
+            <p>{experience.environment.join(' · ')}</p>
           </li>
         ))}
       </ul>

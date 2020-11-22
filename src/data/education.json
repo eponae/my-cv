@@ -12,15 +12,21 @@
       "list": [
         {
           "id": "ing",
-          "title": "Ingénieure en Informatique diplômée de l'ESIEA Paris en 2015"
+          "year": 2015,
+          "title": "Ingénieure",
+          "info": "Ingénieure en Informatique ESIEA Paris"
         },
         {
           "id": "toeic",
-          "title": "TOEIC 890 en 2014"
+          "year": 2014,
+          "title": "TOEIC",
+          "info": "Score 890"
         },
         {
           "id": "bac",
-          "title": "Baccalauréat S avec mention Bien en 2010"
+          "year": 2010,
+          "title": "Baccalauréat S",
+          "info": "Mention Bien"
         }
       ]
     },

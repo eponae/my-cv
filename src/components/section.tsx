@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 type Props = {
   title: string;
-  subtitle?: string;
 };
 
 const SectionWrapper = styled.section`
@@ -14,18 +13,9 @@ const SectionWrapper = styled.section`
   margin: 32px 0;
 `;
 
-const Title = styled.h1`
-  font-size: 32px;
-`;
-
-const Subtitle = styled.h2`
-  font-size: 24px;
-`;
-
-const Section: FC<Props> = ({ title, subtitle, children }) => (
+const Section: FC<Props> = ({ title, children }) => (
   <SectionWrapper>
-    <Title>{title}</Title>
-    {subtitle && <Subtitle>{subtitle}</Subtitle>}
+    <h1>{title}</h1>
     {children}
   </SectionWrapper>
 );

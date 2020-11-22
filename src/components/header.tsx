@@ -1,19 +1,20 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React, { FC } from 'react';
 import styled from 'styled-components';
-import {
-  BasicsType,
-  ContactType,
-  SkillsType,
-  SummaryType,
-} from '../types/types';
+import { BasicsType, ContactType, SummaryType } from '../types/types';
 import { getNodeData } from '../utils/dataUtils';
+import { mediaQueries } from './theme';
 
 const HeaderWrapper = styled.header`
-  border-radius: ${({ theme }) => theme.borderRadius};
-  border: 1px solid ${({ theme }) => theme.colors.darkGray};
   text-align: left;
   padding: ${({ theme }) => theme.padding};
+  max-width: 50%;
+  ${mediaQueries('sm')`max-width: 100%;`}
+`;
+
+const SummaryDescription = styled.p`
+  font-weight: 500;
+  color: ${({ theme }) => theme.colors.brown};
 `;
 
 const Header: FC = () => {
@@ -28,7 +29,6 @@ const Header: FC = () => {
               title
               description
             }
-            skills
             contact {
               title
               list {
@@ -49,7 +49,6 @@ const Header: FC = () => {
     `,
   );
   const { summary }: { summary: SummaryType } = getNodeData('summary', nodes);
-  const { skills }: { skills: SkillsType } = getNodeData('skills', nodes);
   const { contact }: { contact: ContactType } = getNodeData('contact', nodes);
   const {
     basics,
@@ -66,8 +65,23 @@ const Header: FC = () => {
     <HeaderWrapper>
       <h1>{basics.name}</h1>
       <h2>{basics.job}</h2>
-      <h3>{basics.location}</h3>
-      <div>{basics.mode}</div>
+      <h3>
+        {basics.location}
+        {` · `}
+        {basics.mode}
+      </h3>
+      <h1>{summary.title}</h1>
+      <SummaryDescription>{summary.description}</SummaryDescription>
+      <h3>{contact.title}</h3>
+      <ul>
+        {contact.list.map((link, index) => (
+          <li key={`${link.id}`}>
+            <a href={link.link} target="_blank" rel="noreferrer noopener">
+              {link.name}
+            </a>
+          </li>
+        ))}
+      </ul>
     </HeaderWrapper>
   );
 };

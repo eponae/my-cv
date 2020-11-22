@@ -40,20 +40,21 @@ export type BasicsType = {
   mode: string;
 };
 
-export type SkillsType = Array<string>;
+export type SkillsType = { list: Array<string>; title: string };
 
-export type HobbiesType = Array<{
-  title: string;
+export type HobbiesType = {
   list: Array<{ id: string; name: string }>;
-}>;
-
-type Education = {
-  list: Array<{ id: string; title: string }>;
   title: string;
 };
 
 export type EducationType = {
-  languages: Array<Education>;
-  certificates: Array<Education>;
+  languages: {
+    list: Array<{ id: string; title: string }>;
+    title: string;
+  };
+  certificates: {
+    list: Array<{ id: string; title: string; year: number; info: string }>;
+    title: string;
+  };
   title: string;
 };

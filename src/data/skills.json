@@ -1,12 +1,15 @@
 {
-  "skills": [
-    "React JS",
-    "CSS",
-    "HTML",
-    "Javascript",
-    "Git",
-    "Kanban",
-    "Tests",
-    "REST"
-  ]
+  "skills": {
+    "title": "Compétences",
+    "list": [
+      "ReactJS",
+      "CSS",
+      "HTML",
+      "Javascript",
+      "Git",
+      "Kanban",
+      "REST",
+      "Tests"
+    ]
+  }
 }

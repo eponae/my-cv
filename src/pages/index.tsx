@@ -1,5 +1,5 @@
 import React from 'react';
-import Experience from '../components/experience';
+import Content from '../components/content';
 import Header from '../components/header';
 import SEO from '../components/seo';
 import Theme from '../components/theme';
@@ -8,7 +8,7 @@ const IndexPage = () => (
   <Theme>
     <Header />
     <SEO />
-    <Experience />
+    <Content />
     <footer>
       Créé avec
       {` `}

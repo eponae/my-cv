@@ -8,13 +8,26 @@ import { mediaQueries } from './theme';
 const HeaderWrapper = styled.header`
   text-align: left;
   padding: ${({ theme }) => theme.padding};
-  max-width: 50%;
-  ${mediaQueries('sm')`max-width: 100%;`}
+  border-radius: ${({ theme }) => theme.borderRadius};
+  border: 1px solid ${({ theme }) => theme.colors.lightGray};
+  background-color: ${({ theme }) => theme.colors.lightGray};
+`;
+
+const SummaryTitle = styled.h1`
+  padding-top: 16px;
 `;
 
 const SummaryDescription = styled.p`
   font-weight: 500;
-  color: ${({ theme }) => theme.colors.brown};
+  padding-bottom: 24px;
+  max-width: 50%;
+  ${mediaQueries('sm')`max-width: 100%;`}
+`;
+
+const Contact = styled.li`
+  &:not(:first-child) {
+    padding-top: 4px;
+  }
 `;
 
 const Header: FC = () => {
@@ -70,16 +83,16 @@ const Header: FC = () => {
         {` · `}
         {basics.mode}
       </h3>
-      <h1>{summary.title}</h1>
+      <SummaryTitle>{summary.title}</SummaryTitle>
       <SummaryDescription>{summary.description}</SummaryDescription>
       <h3>{contact.title}</h3>
       <ul>
-        {contact.list.map((link, index) => (
-          <li key={`${link.id}`}>
+        {contact.list.map((link) => (
+          <Contact key={`${link.id}`}>
             <a href={link.link} target="_blank" rel="noreferrer noopener">
               {link.name}
             </a>
-          </li>
+          </Contact>
         ))}
       </ul>
     </HeaderWrapper>

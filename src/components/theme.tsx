@@ -48,7 +48,7 @@ export const AppStyles = createGlobalStyle<{ theme: ThemeType }>`
     margin: 0;
   }
   h1, h2, h3 {
-    padding-bottom: 16px;
+    padding-bottom: 8px;
   }
   ul {
     list-style-type: none;

@@ -90,7 +90,7 @@ const Education: FC = () => {
           <TimelineMobile>
             <ul>
               {certificates.list.map((certificate) => (
-                <Certificate key={certificate.id}>
+                <Certificate key={`mobile-${certificate.id}`}>
                   <Year>{certificate.year}</Year>
                   <span>{` ${certificate.title} ${certificate.info}`}</span>
                 </Certificate>

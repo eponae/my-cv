@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, Fragment } from 'react';
 import styled from 'styled-components';
 import { EducationType } from '../types/types';
 import Tooltip from 'react-tooltip';
@@ -64,13 +64,8 @@ const Timeline: FC<Props> = ({ data }) => {
         {data.map((certificate) => {
           const left = ((endYear - certificate.year) * 100) / totalYears;
           return (
-            <>
-              <Circle
-                key={certificate.id}
-                left={`${left}%`}
-                data-tip
-                data-for={certificate.id}
-              >
+            <Fragment key={`desktop-${certificate.id}`}>
+              <Circle left={`${left}%`} data-tip data-for={certificate.id}>
                 <Text>
                   <TextContent>{certificate.year}</TextContent>
                   <TextInfo>{certificate.title}</TextInfo>
@@ -79,7 +74,7 @@ const Timeline: FC<Props> = ({ data }) => {
               <Tooltip id={certificate.id} effect="solid">
                 {certificate.info}
               </Tooltip>
-            </>
+            </Fragment>
           );
         })}
       </Line>

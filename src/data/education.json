@@ -1,0 +1,35 @@
+{
+  "education": {
+    "languages": {
+      "title": "Langues",
+      "list": [
+        { "id": "fr", "title": "Français langue natale" },
+        { "id": "en", "title": "Anglais professionnel" }
+      ]
+    },
+    "certificates": {
+      "title": "Diplômes",
+      "list": [
+        {
+          "id": "ing",
+          "year": 2015,
+          "title": "Ingénieure",
+          "info": "Ingénieure en Informatique ESIEA Paris"
+        },
+        {
+          "id": "toeic",
+          "year": 2014,
+          "title": "TOEIC",
+          "info": "Score 890"
+        },
+        {
+          "id": "bac",
+          "year": 2010,
+          "title": "Baccalauréat S",
+          "info": "Mention Bien"
+        }
+      ]
+    },
+    "title": "Formation"
+  }
+}

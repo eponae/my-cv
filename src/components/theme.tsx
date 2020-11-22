@@ -5,7 +5,7 @@ const theme = {
   fontFamily: 'Georgia',
   colors: {
     white: '#fff',
-    red: '#bb7866',
+    blue: '#3366cc',
     brown: '#382d1d',
     gray: '4c4c4c',
     black: '#000',

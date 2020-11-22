@@ -1,7 +1,5 @@
 import React, { FC } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
-
 import Header from './header';
 
 const LayoutWrapper = styled.div`
@@ -14,20 +12,10 @@ const LayoutWrapper = styled.div`
 `;
 
 const Layout: FC = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
       <LayoutWrapper>
+        <Header />
         <main>{children}</main>
         <footer>
           Créé avec

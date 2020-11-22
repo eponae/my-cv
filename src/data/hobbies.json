@@ -3,7 +3,8 @@
     "title": "Loisirs",
     "list": [
       {
-        "title": "Équitation"
+        "id": "horse",
+        "name": "Équitation"
       }
     ]
   }

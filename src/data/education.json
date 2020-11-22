@@ -1,0 +1,29 @@
+{
+  "education": {
+    "languages": {
+      "title": "Langues",
+      "list": [
+        { "id": "fr", "title": "Français langue natale" },
+        { "id": "en", "title": "Anglais professionnel" }
+      ]
+    },
+    "certificates": {
+      "title": "Diplômes",
+      "list": [
+        {
+          "id": "ing",
+          "title": "Ingénieure en Informatique diplômée de l'ESIEA Paris en 2015"
+        },
+        {
+          "id": "toeic",
+          "title": "TOEIC 890 en 2014"
+        },
+        {
+          "id": "bac",
+          "title": "Baccalauréat S avec mention Bien en 2010"
+        }
+      ]
+    },
+    "title": "Formation"
+  }
+}

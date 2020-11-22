@@ -18,7 +18,10 @@ export type ExperienceType = {
   companies: Array<CompanyType>;
 };
 
-export type SummaryType = string;
+export type SummaryType = {
+  title: string;
+  description: string;
+};
 
 export type ContactType = {
   list: Array<{ id: string; name: string; link: string }>;
@@ -33,6 +36,8 @@ export type BasicsType = {
   description: string;
   site: string;
   title: string;
+  location: string;
+  mode: string;
 };
 
 export type SkillsType = Array<string>;

@@ -1,12 +1,9 @@
 import React, { FC } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Section from './section';
-import { CompanyType, ExperienceType } from '../types/types';
+import { CompanyType } from '../types/types';
 import Company from './company';
-
-type Node = {
-  experience: ExperienceType | null;
-};
+import { getNodeData } from '../utils/dataUtils';
 
 const Experience: FC = () => {
   const {
@@ -38,7 +35,7 @@ const Experience: FC = () => {
       }
     `,
   );
-  const data = nodes.find((node: Node) => !!node.experience);
+  const data = getNodeData('experience', nodes);
   const { title, companies } = data.experience;
 
   return (

@@ -1,15 +1,19 @@
 import React from 'react';
 import Experience from '../components/experience';
-import Layout from '../components/layout';
+import Header from '../components/header';
 import SEO from '../components/seo';
 import Theme from '../components/theme';
 
 const IndexPage = () => (
   <Theme>
-    <Layout>
-      <SEO />
-      <Experience />
-    </Layout>
+    <Header />
+    <SEO />
+    <Experience />
+    <footer>
+      Créé avec
+      {` `}
+      <a href="https://www.gatsbyjs.org">Gatsby</a>
+    </footer>
   </Theme>
 );
 

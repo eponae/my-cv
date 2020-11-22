@@ -11,7 +11,7 @@
         },
         "experiences": [
           {
-            "job": "Développeuse Web Front",
+            "job": "Développeuse Web Frontend",
             "date": "Janvier 2018 à Aujourd'hui * Plus de 2 ans",
             "tasks": [
               "Implémenter des fonctionnalités pour l'interface du système de recommandations",
@@ -51,7 +51,7 @@
         "id": "zenika",
         "company": {
           "name": "Zenika",
-          "description": "Cabinet de consultants spécialisés dans le Web",
+          "description": "Cabinet de prestation spécialisé dans le Web",
           "link": "https://www.zenika.com"
         },
         "experiences": [

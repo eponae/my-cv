@@ -19,7 +19,8 @@ const theme = {
 export type ThemeType = typeof theme;
 
 export const breakpoints = {
-  sm: 768,
+  sm: 1024,
+  md: 1315,
 } as const;
 
 export const mediaQueries = (key: keyof typeof breakpoints) => {
@@ -65,7 +66,7 @@ export const AppStyles = createGlobalStyle<{ theme: ThemeType }>`
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    ${mediaQueries('sm')`max-width: 90%; margin: 32px auto;`}
+    ${mediaQueries('md')`max-width: 90%; margin: 32px auto;`}
   }
 `;
 

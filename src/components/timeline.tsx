@@ -39,8 +39,8 @@ const Text = styled.span`
   position: absolute;
   top: 20px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-flow: column nowrap;
+  align-items: flex-start;
 `;
 
 const TextContent = styled.span`

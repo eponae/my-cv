@@ -1,14 +1,26 @@
 import React, { FC } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Section from './section';
-import { EducationType, HobbiesType } from '../types/types';
+import { EducationType } from '../types/types';
 import { getNodeData } from '../utils/dataUtils';
 import styled from 'styled-components';
 import Timeline from './timeline';
 import { mediaQueries } from './theme';
 
-const ArticleTop = styled.div`
+const EducationWrapper = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  ${mediaQueries('sm')`flex-flow: column nowrap;`}
+`;
+
+const Top = styled.div`
   padding-bottom: 16px;
+  width: 30%;
+`;
+
+const Bottom = styled.div`
+  width: 70%;
 `;
 
 const Certificate = styled.li`
@@ -63,28 +75,30 @@ const Education: FC = () => {
   const { title, languages, certificates } = education;
   return (
     <Section title={title}>
-      <ArticleTop>
-        <h2>{languages.title}</h2>
-        <ul>
-          {languages.list.map((language) => (
-            <li key={language.id}>{language.title}</li>
-          ))}
-        </ul>
-      </ArticleTop>
-      <div>
-        <h2>{certificates.title}</h2>
-        <Timeline data={certificates.list} />
-        <TimelineMobile>
+      <EducationWrapper>
+        <Top>
+          <h2>{languages.title}</h2>
           <ul>
-            {certificates.list.map((certificate) => (
-              <Certificate key={certificate.id}>
-                <Year>{certificate.year}</Year>
-                <span>{` ${certificate.title} ${certificate.info}`}</span>
-              </Certificate>
+            {languages.list.map((language) => (
+              <li key={language.id}>{language.title}</li>
             ))}
           </ul>
-        </TimelineMobile>
-      </div>
+        </Top>
+        <Bottom>
+          <h2>{certificates.title}</h2>
+          <Timeline data={certificates.list} />
+          <TimelineMobile>
+            <ul>
+              {certificates.list.map((certificate) => (
+                <Certificate key={certificate.id}>
+                  <Year>{certificate.year}</Year>
+                  <span>{` ${certificate.title} ${certificate.info}`}</span>
+                </Certificate>
+              ))}
+            </ul>
+          </TimelineMobile>
+        </Bottom>
+      </EducationWrapper>
     </Section>
   );
 };

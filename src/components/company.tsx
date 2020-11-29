@@ -37,7 +37,9 @@ const Date = styled.div`
 `;
 
 const TaskList = styled.ul`
+  list-style-type: '★ ';
   padding-left: 8px;
+  list-style-position: inside;
 `;
 
 const Task = styled.li`

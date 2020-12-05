@@ -6,8 +6,8 @@ import Skills from './skills';
 
 const Content: FC = () => (
   <>
-    <Experience />
     <Skills />
+    <Experience />
     <Education />
     <Hobbies />
   </>

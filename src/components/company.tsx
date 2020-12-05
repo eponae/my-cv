@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { CompanyType } from '../types/types';
+import StarImage from '../images/star.svg';
 
 type Props = {
   company: CompanyType;
@@ -37,12 +38,13 @@ const Date = styled.div`
 `;
 
 const TaskList = styled.ul`
-  list-style-type: '★ ';
   padding-left: 8px;
   list-style-position: inside;
 `;
 
 const Task = styled.li`
+  display: flex;
+  align-items: center;
   &:not(:last-child) {
     padding-bottom: 2px;
   }
@@ -52,6 +54,12 @@ const Environment = styled.p`
   padding-top: 8px;
   color: ${({ theme }) => theme.colors.brown};
   font-weight: 500;
+`;
+
+const Img = styled(StarImage)`
+  width: 14px;
+  height: 14px;
+  padding-right: 4px;
 `;
 
 const Company: FC<Props> = ({ company }) => {
@@ -73,7 +81,10 @@ const Company: FC<Props> = ({ company }) => {
             <Date>{experience.date}</Date>
             <TaskList>
               {experience.tasks.map((task, taskIndex) => (
-                <Task key={`${id}-task-${expIndex}-${taskIndex}`}>{task}</Task>
+                <Task key={`${id}-task-${expIndex}-${taskIndex}`}>
+                  <Img />
+                  {task}
+                </Task>
               ))}
             </TaskList>
             <Environment>{experience.environment.join(' · ')}</Environment>

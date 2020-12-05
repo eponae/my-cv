@@ -41,7 +41,7 @@ export const AppStyles = createGlobalStyle<{ theme: ThemeType }>`
     font-size: ${({ theme }) => theme.h2FontSize};
   }
   h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
   h1, h2, h3, p, ul, li {
     padding: 0;
@@ -55,6 +55,7 @@ export const AppStyles = createGlobalStyle<{ theme: ThemeType }>`
   }
   div, p, span {
     color: ${({ theme }) => theme.colors.darkGray};
+    font-size: 16px;
   }
   a {
     color: ${({ theme }) => theme.colors.blue};

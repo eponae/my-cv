@@ -31,7 +31,6 @@
               "Jest",
               "Git",
               "REST",
-              "SQL",
               "Npm"
             ]
           },
@@ -46,7 +45,7 @@
               "Renforcer la cohésion d'équipe",
               "Participer aux processus de recrutement"
             ],
-            "environment": ["Jira", "Kanban", "Slack"]
+            "environment": ["Kanban", "Jira", "Slack"]
           }
         ]
       },
@@ -102,7 +101,7 @@
         "id": "nagra",
         "company": {
           "name": "Nagra Media UK",
-          "description": "Spécialisé dans la sécurité et la création de solutions pour les médias"
+          "description": "Spécialiste dans la sécurité et la création de solutions pour les médias"
         },
         "experiences": [
           {

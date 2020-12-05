@@ -3,6 +3,11 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Section from './section';
 import { SkillsType } from '../types/types';
 import { getNodeData } from '../utils/dataUtils';
+import styled from 'styled-components';
+
+const Skill = styled.p`
+  font-weight: 600;
+`;
 
 const Skills: FC = () => {
   const {
@@ -24,7 +29,7 @@ const Skills: FC = () => {
   const { skills }: { skills: SkillsType } = getNodeData('skills', nodes);
   return (
     <Section title={skills.title}>
-      <p>{skills.list.join(' · ')}</p>
+      <Skill>{skills.list.join(' · ')}</Skill>
     </Section>
   );
 };

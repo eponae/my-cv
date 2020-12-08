@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import { CompanyType } from '../types/types';
 import StarImage from '../images/star.svg';
+import { mediaQueries } from './theme';
 
 type Props = {
   company: CompanyType;
@@ -48,6 +49,7 @@ const Task = styled.li`
   &:not(:last-child) {
     padding-bottom: 2px;
   }
+  ${mediaQueries('xs')`align-items: flex-start;`}
 `;
 
 const Environment = styled.p`
@@ -59,6 +61,8 @@ const Environment = styled.p`
 const Img = styled(StarImage)`
   width: 14px;
   height: 14px;
+  min-width: 14px;
+  min-height: 14px;
   padding-right: 4px;
 `;
 

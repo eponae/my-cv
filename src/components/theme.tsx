@@ -19,6 +19,7 @@ const theme = {
 export type ThemeType = typeof theme;
 
 export const breakpoints = {
+  xs: 768,
   sm: 1024,
   md: 1315,
 } as const;

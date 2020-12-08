@@ -49,7 +49,7 @@ const Task = styled.li`
   &:not(:last-child) {
     padding-bottom: 2px;
   }
-  ${mediaQueries('xs')`align-items: flex-start;`}
+  ${mediaQueries('sm')`align-items: flex-start;`}
 `;
 
 const Environment = styled.p`

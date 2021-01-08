@@ -3,30 +3,46 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { EducationType } from '../types/types';
 import { getNodeData } from '../utils/dataUtils';
 import styled from 'styled-components';
-import { mediaQueries } from './theme';
+import Section from './section';
+import Title from './title';
+import Dot from './dot';
+import { screenDimensions } from './theme';
 
 const EducationWrapper = styled.div`
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
-  ${mediaQueries('sm')`flex-flow: column nowrap;`}
+  @media ${screenDimensions.smScreen} {
+    flex-flow: column nowrap;
+  }
 `;
 
 const Top = styled.div`
   padding-bottom: 16px;
-  width: 30%;
+  width: 50%;
+  @media ${screenDimensions.smScreen} {
+    width: 100%;
+  }
 `;
 
 const Bottom = styled.div`
-  width: 70%;
+  width: 50%;
+  @media ${screenDimensions.smScreen} {
+    width: 100%;
+  }
 `;
 
-const Certificate = styled.li`
+const Item = styled.li`
   padding-bottom: 4px;
 `;
 
-const Year = styled.span`
+const CertificateYear = styled.span`
   font-weight: 700;
+`;
+
+const CertificateTitle = styled.span`
+  display: inline-block;
+  padding-left: 8px;
 `;
 
 const Education: FC = () => {
@@ -51,7 +67,6 @@ const Education: FC = () => {
                   id
                   year
                   title
-                  info
                 }
               }
             }
@@ -66,29 +81,33 @@ const Education: FC = () => {
   );
   const { languages, certificates } = education;
   return (
-    <div>
+    <Section>
       <EducationWrapper>
         <Top>
-          <h2>{languages.title}</h2>
+          <Title>{certificates.title}</Title>
           <ul>
-            {languages.list.map((language) => (
-              <li key={language.id}>{language.title}</li>
+            {certificates.list.map((certificate) => (
+              <Item key={`mobile-${certificate.id}`}>
+                <Dot />
+                <CertificateYear>{certificate.year}</CertificateYear>
+                <CertificateTitle>{certificate.title}</CertificateTitle>
+              </Item>
             ))}
           </ul>
         </Top>
         <Bottom>
-          <h2>{certificates.title}</h2>
+          <Title>{languages.title}</Title>
           <ul>
-            {certificates.list.map((certificate) => (
-              <Certificate key={`mobile-${certificate.id}`}>
-                <Year>{certificate.year}</Year>
-                <span>{` ${certificate.title} ${certificate.info}`}</span>
-              </Certificate>
+            {languages.list.map((language) => (
+              <Item key={language.id}>
+                <Dot />
+                {language.title}
+              </Item>
             ))}
           </ul>
         </Bottom>
       </EducationWrapper>
-    </div>
+    </Section>
   );
 };
 

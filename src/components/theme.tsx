@@ -1,6 +1,14 @@
 import React, { FC } from 'react';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
+export const breakpoints = {
+  sm: 804,
+} as const;
+
+export const screenDimensions = {
+  smScreen: `(max-width: ${breakpoints.sm}px)`,
+} as const;
+
 const theme = {
   fontFamily: 'Source Sans Pro',
   colors: {
@@ -10,20 +18,12 @@ const theme = {
     lightBlue: '#87b9e7',
     orangeBackground: '#fef9f8',
   },
-  padding: '32px',
+  padding: '152px',
+  paddingSpace: '24px',
+  mobilePadding: '32px',
 };
 
 export type ThemeType = typeof theme;
-
-export const breakpoints = {
-  sm: 1024,
-  md: 1315,
-} as const;
-
-export const mediaQueries = (key: keyof typeof breakpoints) => {
-  return (style: TemplateStringsArray | string) =>
-    `@media (max-width: ${breakpoints[key]}px) { ${style} }`;
-};
 
 export const AppStyles = createGlobalStyle<{ theme: ThemeType }>`
   * {
@@ -39,19 +39,20 @@ export const AppStyles = createGlobalStyle<{ theme: ThemeType }>`
   div, p, span {
     color: ${({ theme }) => theme.colors.black};
     font-size: 16px;
+    font-weight: 400;
   }
   a {
     color: ${({ theme }) => theme.colors.black};
     text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   body {
-    margin: 64px 0;
-    max-width: 1280px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    ${mediaQueries('md')`max-width: 90%; margin: 32px 0;`}
   }
 `;
 

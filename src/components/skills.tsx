@@ -4,6 +4,7 @@ import { SkillsType } from '../types/types';
 import { getNodeData } from '../utils/dataUtils';
 import styled from 'styled-components';
 import Title from './title';
+import Section from './section';
 
 const Skill = styled.p`
   font-weight: 600;
@@ -29,10 +30,10 @@ const Skills: FC = () => {
   );
   const { skills }: { skills: SkillsType } = getNodeData('skills', nodes);
   return (
-    <div>
+    <Section>
       <Title>{skills.title}</Title>
       <Skill>{skills.list.join(' · ')}</Skill>
-    </div>
+    </Section>
   );
 };
 

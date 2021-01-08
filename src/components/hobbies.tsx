@@ -3,6 +3,8 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { HobbiesType } from '../types/types';
 import { getNodeData } from '../utils/dataUtils';
 import Title from './title';
+import SectionWithBackground from './sectionWithBackground';
+import Dot from './dot';
 
 const Hobbies: FC = () => {
   const {
@@ -26,14 +28,17 @@ const Hobbies: FC = () => {
   );
   const { hobbies }: { hobbies: HobbiesType } = getNodeData('hobbies', nodes);
   return (
-    <div>
+    <SectionWithBackground>
       <Title>{hobbies.title}</Title>
       <ul>
         {hobbies.list.map((hobby) => (
-          <li key={hobby.id}>{hobby.name}</li>
+          <li key={hobby.id}>
+            <Dot />
+            {hobby.name}
+          </li>
         ))}
       </ul>
-    </div>
+    </SectionWithBackground>
   );
 };
 

@@ -2,15 +2,15 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import { CompanyType } from '../types/types';
 import Dot from './dot';
-import { mediaQueries } from './theme';
+import { screenDimensions } from './theme';
 
 type Props = {
   company: CompanyType;
 };
 
 const CompanyWrapper = styled.div`
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: ${({ theme }) => theme.paddingSpace};
+  padding-bottom: ${({ theme }) => theme.paddingSpace};
 `;
 
 const CompanyName = styled.a`
@@ -26,15 +26,21 @@ const Experience = styled.li`
   }
 `;
 
+const ExperienceList = styled.ul`
+  padding-top: 16px;
+`;
+
 const Job = styled.div`
   font-weight: 900;
   color: ${({ theme }) => theme.colors.orange};
+  padding-bottom: 8px;
 `;
 
 const Date = styled.div`
   color: ${({ theme }) => theme.colors.black};
   font-weight: 600;
   padding-top: 16px;
+  padding-bottom: 8px;
 `;
 
 const TaskList = styled.ul`
@@ -45,10 +51,10 @@ const TaskList = styled.ul`
 const Task = styled.li`
   display: flex;
   align-items: center;
-  &:not(:last-child) {
-    padding-bottom: 2px;
+  padding-bottom: 4px;
+  @media ${screenDimensions.smScreen} {
+    align-items: flex-start;
   }
-  ${mediaQueries('sm')`align-items: flex-start;`}
 `;
 
 const Environment = styled.p`
@@ -68,12 +74,11 @@ const Company: FC<Props> = ({ company }) => {
         {companyDescription.name}
       </CompanyName>
       <div>{companyDescription.description}</div>
-      <ul>
+      <ExperienceList>
         {experiences.map((experience, expIndex) => (
           <Experience key={`${id}-exp-${expIndex}`}>
             <Job>{experience.job}</Job>
             <Environment>{experience.environment.join(' · ')}</Environment>
-
             <Date>{experience.date}</Date>
             <TaskList>
               {experience.tasks.map((task, taskIndex) => (
@@ -85,7 +90,7 @@ const Company: FC<Props> = ({ company }) => {
             </TaskList>
           </Experience>
         ))}
-      </ul>
+      </ExperienceList>
     </CompanyWrapper>
   );
 };

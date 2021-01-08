@@ -51,7 +51,7 @@ export type EducationType = {
     title: string;
   };
   certificates: {
-    list: Array<{ id: string; title: string; year: number; info: string }>;
+    list: Array<{ id: string; title: string; year: number }>;
     title: string;
   };
 };

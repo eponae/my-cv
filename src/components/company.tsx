@@ -1,23 +1,23 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { CompanyType } from '../types/types';
-import StarImage from '../images/star.svg';
-import { mediaQueries } from './theme';
+import Dot from './dot';
+import { screenDimensions } from './theme';
 
 type Props = {
   company: CompanyType;
 };
 
 const CompanyWrapper = styled.div`
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: ${({ theme }) => theme.paddingSpace};
+  padding-bottom: ${({ theme }) => theme.paddingSpace};
 `;
 
 const CompanyName = styled.a`
-  font-size: ${({ theme }) => theme.h2FontSize};
-  color: ${({ theme }) => theme.colors.brown};
+  color: ${({ theme }) => theme.colors.black};
   display: inline-block;
-  padding-bottom: 8px;
+  font-weight: bold;
+  font-size: 26px;
 `;
 
 const Experience = styled.li`
@@ -26,16 +26,21 @@ const Experience = styled.li`
   }
 `;
 
+const ExperienceList = styled.ul`
+  padding-top: 16px;
+`;
+
 const Job = styled.div`
-  padding-top: 8px;
+  font-weight: 900;
+  color: ${({ theme }) => theme.colors.orange};
   padding-bottom: 8px;
-  font-weight: 600;
 `;
 
 const Date = styled.div`
-  color: ${({ theme }) => theme.colors.brown};
+  color: ${({ theme }) => theme.colors.black};
+  font-weight: 600;
+  padding-top: 16px;
   padding-bottom: 8px;
-  font-weight: 500;
 `;
 
 const TaskList = styled.ul`
@@ -46,24 +51,15 @@ const TaskList = styled.ul`
 const Task = styled.li`
   display: flex;
   align-items: center;
-  &:not(:last-child) {
-    padding-bottom: 2px;
+  padding-bottom: 4px;
+  @media ${screenDimensions.smScreen} {
+    align-items: flex-start;
   }
-  ${mediaQueries('sm')`align-items: flex-start;`}
 `;
 
 const Environment = styled.p`
-  padding-top: 8px;
-  color: ${({ theme }) => theme.colors.brown};
+  color: ${({ theme }) => theme.colors.orange};
   font-weight: 500;
-`;
-
-const Img = styled(StarImage)`
-  width: 14px;
-  height: 14px;
-  min-width: 14px;
-  min-height: 14px;
-  padding-right: 4px;
 `;
 
 const Company: FC<Props> = ({ company }) => {
@@ -77,24 +73,24 @@ const Company: FC<Props> = ({ company }) => {
       >
         {companyDescription.name}
       </CompanyName>
-      <h3>{companyDescription.description}</h3>
-      <ul>
+      <div>{companyDescription.description}</div>
+      <ExperienceList>
         {experiences.map((experience, expIndex) => (
           <Experience key={`${id}-exp-${expIndex}`}>
             <Job>{experience.job}</Job>
+            <Environment>{experience.environment.join(' · ')}</Environment>
             <Date>{experience.date}</Date>
             <TaskList>
               {experience.tasks.map((task, taskIndex) => (
                 <Task key={`${id}-task-${expIndex}-${taskIndex}`}>
-                  <Img />
+                  <Dot />
                   {task}
                 </Task>
               ))}
             </TaskList>
-            <Environment>{experience.environment.join(' · ')}</Environment>
           </Experience>
         ))}
-      </ul>
+      </ExperienceList>
     </CompanyWrapper>
   );
 };

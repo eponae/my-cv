@@ -1,8 +1,19 @@
 import React, { FC } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Section from './section';
 import { HobbiesType } from '../types/types';
 import { getNodeData } from '../utils/dataUtils';
+import Title from './title';
+import SectionWithBackground from './sectionWithBackground';
+import Dot from './dot';
+import Horse from '../images/horse.svg';
+import styled from 'styled-components';
+import { screenDimensions } from './theme';
+
+const HorseWrapper = styled(Horse)`
+  @media ${screenDimensions.smScreen} {
+    display: none;
+  }
+`;
 
 const Hobbies: FC = () => {
   const {
@@ -26,13 +37,18 @@ const Hobbies: FC = () => {
   );
   const { hobbies }: { hobbies: HobbiesType } = getNodeData('hobbies', nodes);
   return (
-    <Section title={hobbies.title}>
+    <SectionWithBackground>
+      <Title>{hobbies.title}</Title>
       <ul>
         {hobbies.list.map((hobby) => (
-          <li key={hobby.id}>{hobby.name}</li>
+          <li key={hobby.id}>
+            <Dot />
+            {hobby.name}
+          </li>
         ))}
       </ul>
-    </Section>
+      <HorseWrapper />
+    </SectionWithBackground>
   );
 };
 

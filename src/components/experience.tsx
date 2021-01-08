@@ -1,9 +1,10 @@
 import React, { FC } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Section from './section';
 import { CompanyType } from '../types/types';
 import Company from './company';
 import { getNodeData } from '../utils/dataUtils';
+import Title from './title';
+import SectionWithBackground from './sectionWithBackground';
 
 const Experience: FC = () => {
   const {
@@ -39,11 +40,12 @@ const Experience: FC = () => {
   const { title, companies } = data.experience;
 
   return (
-    <Section title={title}>
+    <SectionWithBackground>
+      <Title>{title}</Title>
       {companies.map((company: CompanyType) => (
         <Company key={company.id} company={company} />
       ))}
-    </Section>
+    </SectionWithBackground>
   );
 };
 

@@ -8,28 +8,24 @@
       ]
     },
     "certificates": {
-      "title": "Diplômes",
+      "title": "Formation",
       "list": [
         {
           "id": "ing",
           "year": 2015,
-          "title": "Ingénieure",
-          "info": "Ingénieure en Informatique ESIEA Paris"
+          "title": "Ingénieure informatique ESIEA"
         },
         {
           "id": "toeic",
           "year": 2014,
-          "title": "TOEIC",
-          "info": "Score 890"
+          "title": "TOEIC 890"
         },
         {
           "id": "bac",
           "year": 2010,
-          "title": "Baccalauréat S",
-          "info": "Mention Bien"
+          "title": "Baccalauréat S Bien"
         }
       ]
-    },
-    "title": "Formation"
+    }
   }
 }

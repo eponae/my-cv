@@ -1,18 +1,18 @@
 {
   "experience": {
-    "title": "Expérience professionnelle",
+    "title": "Expériences professionnelles",
     "companies": [
       {
         "id": "doctrine",
         "company": {
           "name": "Doctrine",
-          "description": "Plateforme d'information juridique française",
+          "description": "Plateforme d'information juridique",
           "link": "https://doctrine.fr"
         },
         "experiences": [
           {
             "job": "Développeuse Web Frontend",
-            "date": "Janvier 2018 à Aujourd'hui · Bientôt 3 ans",
+            "date": "Janvier 2018 à Aujourd'hui · 3 ans",
             "tasks": [
               "Implémenter des fonctionnalités pour l'interface du système de recommandations et l'analyseur de documents",
               "Élaborer et diffuser les bonnes pratiques en équipe: standards de la communauté Javascript",

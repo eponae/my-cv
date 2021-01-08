@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Section from './section';
 import { HobbiesType } from '../types/types';
 import { getNodeData } from '../utils/dataUtils';
+import Title from './title';
 
 const Hobbies: FC = () => {
   const {
@@ -26,13 +26,14 @@ const Hobbies: FC = () => {
   );
   const { hobbies }: { hobbies: HobbiesType } = getNodeData('hobbies', nodes);
   return (
-    <Section title={hobbies.title}>
+    <div>
+      <Title>{hobbies.title}</Title>
       <ul>
         {hobbies.list.map((hobby) => (
           <li key={hobby.id}>{hobby.name}</li>
         ))}
       </ul>
-    </Section>
+    </div>
   );
 };
 

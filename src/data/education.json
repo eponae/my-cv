@@ -8,7 +8,7 @@
       ]
     },
     "certificates": {
-      "title": "Diplômes",
+      "title": "Formation",
       "list": [
         {
           "id": "ing",
@@ -29,7 +29,6 @@
           "info": "Mention Bien"
         }
       ]
-    },
-    "title": "Formation"
+    }
   }
 }

@@ -1,10 +1,8 @@
 import React, { FC } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Section from './section';
 import { EducationType } from '../types/types';
 import { getNodeData } from '../utils/dataUtils';
 import styled from 'styled-components';
-import Timeline from './timeline';
 import { mediaQueries } from './theme';
 
 const EducationWrapper = styled.div`
@@ -31,11 +29,6 @@ const Year = styled.span`
   font-weight: 700;
 `;
 
-const TimelineMobile = styled.ul`
-  display: none;
-  ${mediaQueries('sm')`display: block;`}
-`;
-
 const Education: FC = () => {
   const {
     allDataJson: { nodes },
@@ -45,7 +38,6 @@ const Education: FC = () => {
         allDataJson {
           nodes {
             education {
-              title
               languages {
                 title
                 list {
@@ -72,9 +64,9 @@ const Education: FC = () => {
     'education',
     nodes,
   );
-  const { title, languages, certificates } = education;
+  const { languages, certificates } = education;
   return (
-    <Section title={title}>
+    <div>
       <EducationWrapper>
         <Top>
           <h2>{languages.title}</h2>
@@ -86,20 +78,17 @@ const Education: FC = () => {
         </Top>
         <Bottom>
           <h2>{certificates.title}</h2>
-          <Timeline data={certificates.list} />
-          <TimelineMobile>
-            <ul>
-              {certificates.list.map((certificate) => (
-                <Certificate key={`mobile-${certificate.id}`}>
-                  <Year>{certificate.year}</Year>
-                  <span>{` ${certificate.title} ${certificate.info}`}</span>
-                </Certificate>
-              ))}
-            </ul>
-          </TimelineMobile>
+          <ul>
+            {certificates.list.map((certificate) => (
+              <Certificate key={`mobile-${certificate.id}`}>
+                <Year>{certificate.year}</Year>
+                <span>{` ${certificate.title} ${certificate.info}`}</span>
+              </Certificate>
+            ))}
+          </ul>
         </Bottom>
       </EducationWrapper>
-    </Section>
+    </div>
   );
 };
 

@@ -1,12 +1,13 @@
 import React, { FC } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Section from './section';
 import { SkillsType } from '../types/types';
 import { getNodeData } from '../utils/dataUtils';
 import styled from 'styled-components';
+import Title from './title';
 
 const Skill = styled.p`
   font-weight: 600;
+  color: ${({ theme }) => theme.colors.orange};
 `;
 
 const Skills: FC = () => {
@@ -28,9 +29,10 @@ const Skills: FC = () => {
   );
   const { skills }: { skills: SkillsType } = getNodeData('skills', nodes);
   return (
-    <Section title={skills.title}>
+    <div>
+      <Title>{skills.title}</Title>
       <Skill>{skills.list.join(' · ')}</Skill>
-    </Section>
+    </div>
   );
 };
 

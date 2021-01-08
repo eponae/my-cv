@@ -19,13 +19,11 @@ export type ExperienceType = {
 };
 
 export type SummaryType = {
-  title: string;
   description: string;
 };
 
 export type ContactType = {
   list: Array<{ id: string; name: string; link: string }>;
-  title: string;
 };
 
 export type BasicsType = {
@@ -56,5 +54,4 @@ export type EducationType = {
     list: Array<{ id: string; title: string; year: number; info: string }>;
     title: string;
   };
-  title: string;
 };

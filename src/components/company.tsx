@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { CompanyType } from '../types/types';
-import StarImage from '../images/star.svg';
+import Dot from './dot';
 import { mediaQueries } from './theme';
 
 type Props = {
@@ -9,15 +9,15 @@ type Props = {
 };
 
 const CompanyWrapper = styled.div`
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 `;
 
 const CompanyName = styled.a`
-  font-size: ${({ theme }) => theme.h2FontSize};
-  color: ${({ theme }) => theme.colors.brown};
+  color: ${({ theme }) => theme.colors.black};
   display: inline-block;
-  padding-bottom: 8px;
+  font-weight: bold;
+  font-size: 26px;
 `;
 
 const Experience = styled.li`
@@ -27,15 +27,14 @@ const Experience = styled.li`
 `;
 
 const Job = styled.div`
-  padding-top: 8px;
-  padding-bottom: 8px;
-  font-weight: 600;
+  font-weight: 900;
+  color: ${({ theme }) => theme.colors.orange};
 `;
 
 const Date = styled.div`
-  color: ${({ theme }) => theme.colors.brown};
-  padding-bottom: 8px;
-  font-weight: 500;
+  color: ${({ theme }) => theme.colors.black};
+  font-weight: 600;
+  padding-top: 16px;
 `;
 
 const TaskList = styled.ul`
@@ -53,17 +52,8 @@ const Task = styled.li`
 `;
 
 const Environment = styled.p`
-  padding-top: 8px;
-  color: ${({ theme }) => theme.colors.brown};
+  color: ${({ theme }) => theme.colors.orange};
   font-weight: 500;
-`;
-
-const Img = styled(StarImage)`
-  width: 14px;
-  height: 14px;
-  min-width: 14px;
-  min-height: 14px;
-  padding-right: 4px;
 `;
 
 const Company: FC<Props> = ({ company }) => {
@@ -77,21 +67,22 @@ const Company: FC<Props> = ({ company }) => {
       >
         {companyDescription.name}
       </CompanyName>
-      <h3>{companyDescription.description}</h3>
+      <div>{companyDescription.description}</div>
       <ul>
         {experiences.map((experience, expIndex) => (
           <Experience key={`${id}-exp-${expIndex}`}>
             <Job>{experience.job}</Job>
+            <Environment>{experience.environment.join(' · ')}</Environment>
+
             <Date>{experience.date}</Date>
             <TaskList>
               {experience.tasks.map((task, taskIndex) => (
                 <Task key={`${id}-task-${expIndex}-${taskIndex}`}>
-                  <Img />
+                  <Dot />
                   {task}
                 </Task>
               ))}
             </TaskList>
-            <Environment>{experience.environment.join(' · ')}</Environment>
           </Experience>
         ))}
       </ul>

@@ -5,18 +5,6 @@ import { BasicsType, ContactType, SummaryType } from '../types/types';
 import { getNodeData } from '../utils/dataUtils';
 import { mediaQueries } from './theme';
 
-const HeaderWrapper = styled.header`
-  text-align: left;
-  padding: ${({ theme }) => theme.padding};
-  border-radius: ${({ theme }) => theme.borderRadius};
-  border: 1px solid ${({ theme }) => theme.colors.lightGray};
-  background-color: ${({ theme }) => theme.colors.lightGray};
-`;
-
-const SummaryTitle = styled.h1`
-  padding-top: 16px;
-`;
-
 const SummaryDescription = styled.p`
   font-weight: 500;
   padding-bottom: 24px;
@@ -26,8 +14,36 @@ const SummaryDescription = styled.p`
 
 const Contact = styled.li`
   &:not(:first-child) {
-    padding-top: 4px;
+    padding-left: 64px;
   }
+`;
+
+const ContactList = styled.ul`
+  display: flex;
+  list-style-position: inside;
+`;
+
+const TitleName = styled.h1`
+  font-weight: 900;
+  font-size: 38px;
+  color: ${({ theme }) => theme.colors.orange};
+`;
+
+const TitleJob = styled.h2`
+  font-weight: 900;
+  font-size: 20px;
+  color: ${({ theme }) => theme.colors.orange};
+`;
+
+const ContactDot = styled.div`
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+  border: 1px solid ${({ theme }) => theme.colors.lightBlue};
+  background-color: ${({ theme }) => theme.colors.lightBlue};
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
 `;
 
 const Header: FC = () => {
@@ -39,11 +55,9 @@ const Header: FC = () => {
         allDataJson {
           nodes {
             summary {
-              title
               description
             }
             contact {
-              title
               list {
                 id
                 link
@@ -75,27 +89,22 @@ const Header: FC = () => {
   } = getNodeData('basics', nodes);
 
   return (
-    <HeaderWrapper>
-      <h1>{basics.name}</h1>
-      <h2>{basics.job}</h2>
-      <h3>
-        {basics.location}
-        {` · `}
-        {basics.mode}
-      </h3>
-      <SummaryTitle>{summary.title}</SummaryTitle>
-      <SummaryDescription>{summary.description}</SummaryDescription>
-      <h3>{contact.title}</h3>
-      <ul>
+    <header>
+      <TitleName>{basics.name}</TitleName>
+      <TitleJob>{basics.job}</TitleJob>
+      <TitleJob>{basics.mode}</TitleJob>
+      <ContactList>
         {contact.list.map((link) => (
           <Contact key={`${link.id}`}>
+            <ContactDot />
             <a href={link.link} target="_blank" rel="noreferrer noopener">
               {link.name}
             </a>
           </Contact>
         ))}
-      </ul>
-    </HeaderWrapper>
+      </ContactList>
+      <SummaryDescription>{summary.description}</SummaryDescription>
+    </header>
   );
 };
 

@@ -5,6 +5,15 @@ import { getNodeData } from '../utils/dataUtils';
 import Title from './title';
 import SectionWithBackground from './sectionWithBackground';
 import Dot from './dot';
+import Horse from '../images/horse.svg';
+import styled from 'styled-components';
+import { screenDimensions } from './theme';
+
+const HorseWrapper = styled(Horse)`
+  @media ${screenDimensions.smScreen} {
+    display: none;
+  }
+`;
 
 const Hobbies: FC = () => {
   const {
@@ -38,6 +47,7 @@ const Hobbies: FC = () => {
           </li>
         ))}
       </ul>
+      <HorseWrapper />
     </SectionWithBackground>
   );
 };

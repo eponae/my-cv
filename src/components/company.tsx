@@ -51,7 +51,7 @@ const TaskList = styled.ul`
 const Task = styled.li`
   display: flex;
   align-items: center;
-  padding-bottom: 4px;
+  padding-bottom: 8px;
   @media ${screenDimensions.smScreen} {
     align-items: flex-start;
   }

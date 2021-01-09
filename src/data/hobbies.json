@@ -5,6 +5,11 @@
       {
         "id": "horse",
         "name": "Équitation"
+      },
+
+      {
+        "id": "sew",
+        "name": "Couture"
       }
     ]
   }

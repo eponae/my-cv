@@ -33,7 +33,7 @@ const Bottom = styled.div`
 `;
 
 const Item = styled.li`
-  padding-bottom: 4px;
+  padding-bottom: 8px;
 `;
 
 const CertificateYear = styled.span`

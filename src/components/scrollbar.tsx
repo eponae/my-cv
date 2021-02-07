@@ -34,6 +34,10 @@ const ArrowLeftButton = styled.button`
   position: absolute;
   left: -28px;
   bottom: -22px;
+  transition: transform 0.5s;
+  &:hover {
+    transform: scale(1.5, 1.5) translateX(-10px);
+  }
 `;
 
 const RightPlantWrapper = styled(Plant)`
@@ -44,8 +48,12 @@ const RightPlantWrapper = styled(Plant)`
 
 const ArrowRightButton = styled.button`
   position: absolute;
-  right: 0;
+  right: -2px;
   bottom: -22px;
+  transition: transform 0.5s;
+  &:hover {
+    transform: scale(1.5, 1.5) translateX(10px);
+  }
 `;
 
 const Scrollbar: FC<Props> = ({ index, lastIndex, goBack, goNext }) => {

@@ -5,6 +5,7 @@ import { BasicsType, ContactType, SummaryType } from '../types/types';
 import { getNodeData } from '../utils/dataUtils';
 import Ida from '../images/ida-plant.svg';
 import { screenDimensions } from './theme';
+import Dot from './dot';
 
 const HeaderWrapper = styled.header`
   padding: ${({ theme }) => `48px ${theme.padding} ${theme.paddingSpace}`};
@@ -36,17 +37,6 @@ const TitleJob = styled.h2`
   font-weight: 900;
   font-size: 20px;
   color: ${({ theme }) => theme.colors.orange};
-`;
-
-const ContactDot = styled.div`
-  height: 8px;
-  width: 8px;
-  border-radius: 100%;
-  border: 1px solid ${({ theme }) => theme.colors.lightBlue};
-  background-color: ${({ theme }) => theme.colors.lightBlue};
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 8px;
 `;
 
 const Summary = styled.div`
@@ -119,7 +109,7 @@ const Header: FC = () => {
       <ContactList>
         {contact.list.map((link) => (
           <Contact key={`${link.id}`}>
-            <ContactDot />
+            <Dot hasContactColor />
             <a href={link.link} target="_blank" rel="noreferrer noopener">
               {link.name}
             </a>

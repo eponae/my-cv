@@ -43,10 +43,7 @@ export const AppStyles = createGlobalStyle<{ theme: ThemeType }>`
   }
   a {
     color: ${({ theme }) => theme.colors.black};
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
+    text-decoration: underline;
   }
   button {
     border: 0;

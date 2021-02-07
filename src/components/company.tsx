@@ -63,11 +63,6 @@ const Environment = styled.p`
   font-weight: 500;
 `;
 
-const TaskText = styled.span`
-  display: inline-block;
-  padding-left: 8px;
-`;
-
 const Company: FC<Props> = ({ company }) => {
   const { company: companyDescription, experiences, id } = company;
   return (
@@ -90,7 +85,7 @@ const Company: FC<Props> = ({ company }) => {
               {experience.tasks.map((task, taskIndex) => (
                 <Task key={`${id}-task-${expIndex}-${taskIndex}`}>
                   <Dot />
-                  <TaskText>{task}</TaskText>
+                  {task}
                 </Task>
               ))}
             </TaskList>

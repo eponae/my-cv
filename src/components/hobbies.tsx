@@ -4,7 +4,6 @@ import { HobbiesType } from '../types/types';
 import { getNodeData } from '../utils/dataUtils';
 import Title from './title';
 import SectionWithBackground from './sectionWithBackground';
-import Dot from './dot';
 import Horse from '../images/horse.svg';
 import styled from 'styled-components';
 import { screenDimensions } from './theme';
@@ -56,10 +55,7 @@ const Hobbies: FC = () => {
         <Title>{hobbies.title}</Title>
         <ul>
           {hobbies.list.map((hobby) => (
-            <Hobby key={hobby.id}>
-              <Dot />
-              {hobby.name}
-            </Hobby>
+            <Hobby key={hobby.id}>{hobby.name}</Hobby>
           ))}
         </ul>
       </HobbiesWrapper>

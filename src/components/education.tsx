@@ -5,7 +5,6 @@ import { getNodeData } from '../utils/dataUtils';
 import styled from 'styled-components';
 import Section from './section';
 import Title from './title';
-import Dot from './dot';
 import { screenDimensions } from './theme';
 
 const EducationWrapper = styled.div`
@@ -88,7 +87,6 @@ const Education: FC = () => {
           <ul>
             {certificates.list.map((certificate) => (
               <Item key={`mobile-${certificate.id}`}>
-                <Dot />
                 <CertificateYear>{certificate.year}</CertificateYear>
                 <CertificateTitle>{certificate.title}</CertificateTitle>
               </Item>
@@ -99,10 +97,7 @@ const Education: FC = () => {
           <Title>{languages.title}</Title>
           <ul>
             {languages.list.map((language) => (
-              <Item key={language.id}>
-                <Dot />
-                {language.title}
-              </Item>
+              <Item key={language.id}>{language.title}</Item>
             ))}
           </ul>
         </Bottom>

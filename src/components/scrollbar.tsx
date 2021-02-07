@@ -13,7 +13,7 @@ type Props = {
 };
 
 const ScrollBarWrapper = styled.div`
-  width: 74%;
+  width: 70%;
   border-bottom: 3px solid ${({ theme }) => theme.colors.orange};
   margin-left: 24px;
   margin-right: 24px;

@@ -56,14 +56,16 @@ const Task = styled.li`
   display: flex;
   align-items: center;
   padding-bottom: 8px;
-  @media ${screenDimensions.smScreen} {
-    align-items: flex-start;
-  }
 `;
 
 const Environment = styled.p`
   color: ${({ theme }) => theme.colors.orange};
   font-weight: 500;
+`;
+
+const TaskText = styled.span`
+  display: inline-block;
+  padding-left: 8px;
 `;
 
 const Company: FC<Props> = ({ company }) => {
@@ -88,7 +90,7 @@ const Company: FC<Props> = ({ company }) => {
               {experience.tasks.map((task, taskIndex) => (
                 <Task key={`${id}-task-${expIndex}-${taskIndex}`}>
                   <Dot />
-                  {task}
+                  <TaskText>{task}</TaskText>
                 </Task>
               ))}
             </TaskList>

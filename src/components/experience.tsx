@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { CompanyType } from '../types/types';
 import Company from './company';
 import { getNodeData } from '../utils/dataUtils';
 import Title from './title';
 import SectionWithBackground from './sectionWithBackground';
+import Scrollbar from './scrollbar';
 
 const Experience: FC = () => {
   const {
@@ -39,12 +39,33 @@ const Experience: FC = () => {
   const data = getNodeData('experience', nodes);
   const { title, companies } = data.experience;
 
+  const [selectedCompanyIndex, setSelectedCompanyIndex] = useState<number>(0);
+
+  const goBack = () => {
+    if (selectedCompanyIndex > 0) {
+      setSelectedCompanyIndex(selectedCompanyIndex - 1);
+    }
+  };
+
+  const goNext = () => {
+    if (selectedCompanyIndex < companies.length - 1) {
+      setSelectedCompanyIndex(selectedCompanyIndex + 1);
+    }
+  };
+
   return (
     <SectionWithBackground>
       <Title>{title}</Title>
-      {companies.map((company: CompanyType) => (
-        <Company key={company.id} company={company} />
-      ))}
+      <Scrollbar
+        index={selectedCompanyIndex}
+        lastIndex={companies.length - 1}
+        goBack={goBack}
+        goNext={goNext}
+      />
+      <Company
+        key={companies[selectedCompanyIndex].id}
+        company={companies[selectedCompanyIndex]}
+      />
     </SectionWithBackground>
   );
 };

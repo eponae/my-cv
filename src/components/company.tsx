@@ -11,6 +11,10 @@ type Props = {
 const CompanyWrapper = styled.div`
   padding-top: ${({ theme }) => theme.paddingSpace};
   padding-bottom: ${({ theme }) => theme.paddingSpace};
+  width: 80%;
+  @media ${screenDimensions.smScreen} {
+    width: 100%;
+  }
 `;
 
 const CompanyName = styled.a`

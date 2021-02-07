@@ -48,11 +48,23 @@ export const AppStyles = createGlobalStyle<{ theme: ThemeType }>`
       text-decoration: underline;
     }
   }
+  button {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: none;
+    cursor: pointer;
+  }
   body {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
+    
+  }
+  #___gatsby {
+    width: 100%;
   }
 `;
 

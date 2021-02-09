@@ -8,10 +8,11 @@ import { screenDimensions } from './theme';
 import Dot from './dot';
 
 const HeaderWrapper = styled.header`
-  padding: ${({ theme }) => `48px ${theme.padding} ${theme.paddingSpace}`};
+  padding: ${({ theme }) => `48px 0 ${theme.paddingSpace}`};
+  max-width: ${({ theme }) => theme.maxContentWidth};
+  margin: 0 auto;
   @media ${screenDimensions.smScreen} {
-    padding-left: ${({ theme }) => theme.mobilePadding};
-    padding-right: ${({ theme }) => theme.mobilePadding};
+    max-width: 90%;
   }
 `;
 

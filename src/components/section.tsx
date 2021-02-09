@@ -2,11 +2,12 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import { screenDimensions } from './theme';
 
-const SectionWrapper = styled.div`
-  padding: ${({ theme }) => `${theme.paddingSpace} ${theme.padding}`};
+const SectionWrapper = styled.section`
+  padding: ${({ theme }) => `${theme.paddingSpace} 0`};
+  max-width: ${({ theme }) => theme.maxContentWidth};
+  margin: 0 auto;
   @media ${screenDimensions.smScreen} {
-    padding-left: ${({ theme }) => theme.mobilePadding};
-    padding-right: ${({ theme }) => theme.mobilePadding};
+    max-width: 90%;
   }
 `;
 

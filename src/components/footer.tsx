@@ -6,10 +6,11 @@ import { screenDimensions } from './theme';
 const FooterWrapper = styled.footer`
   display: flex;
   align-items: center;
-  padding: ${({ theme }) => `${theme.paddingSpace} ${theme.padding}`};
+  padding: ${({ theme }) => `${theme.paddingSpace} 0`};
+  max-width: ${({ theme }) => theme.maxContentWidth};
+  margin: 0 auto;
   @media ${screenDimensions.smScreen} {
-    padding-left: ${({ theme }) => theme.mobilePadding};
-    padding-right: ${({ theme }) => theme.mobilePadding};
+    max-width: 90%;
   }
 `;
 

@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 export const breakpoints = {
-  sm: 804,
+  sm: 870,
 } as const;
 
 export const screenDimensions = {
@@ -18,9 +18,8 @@ const theme = {
     lightBlue: '#87b9e7',
     orangeBackground: '#fef9f8',
   },
-  padding: '152px',
+  maxContentWidth: '800px',
   paddingSpace: '24px',
-  mobilePadding: '32px',
 };
 
 export type ThemeType = typeof theme;
@@ -58,7 +57,8 @@ export const AppStyles = createGlobalStyle<{ theme: ThemeType }>`
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
-    
+    margin: 0;
+    padding: 0;
   }
   #___gatsby {
     width: 100%;

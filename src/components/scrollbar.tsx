@@ -33,10 +33,10 @@ const LeftPlantWrapper = styled(Plant)`
 const ArrowLeftButton = styled.button`
   position: absolute;
   left: -28px;
-  bottom: -22px;
+  bottom: -29px;
   transition: transform 0.5s;
   &:hover {
-    transform: scale(1.5, 1.5) translateX(-10px);
+    transform: scale(1.1, 1.1) translateX(-10px);
   }
 `;
 
@@ -49,11 +49,21 @@ const RightPlantWrapper = styled(Plant)`
 const ArrowRightButton = styled.button`
   position: absolute;
   right: -2px;
-  bottom: -22px;
+  bottom: -29px;
   transition: transform 0.5s;
   &:hover {
-    transform: scale(1.5, 1.5) translateX(10px);
+    transform: scale(1.1, 1.1) translateX(10px);
   }
+`;
+
+const ArrowRightImage = styled(ArrowRightCircle)`
+  height: 50px;
+  width: 50px;
+`;
+
+const ArrowLeftImage = styled(ArrowLeftCircle)`
+  height: 50px;
+  width: 50px;
 `;
 
 const Scrollbar: FC<Props> = ({ index, lastIndex, goBack, goNext }) => {
@@ -63,13 +73,13 @@ const Scrollbar: FC<Props> = ({ index, lastIndex, goBack, goNext }) => {
         {index === 0 && <LeftPlantWrapper />}
         {index > 0 && (
           <ArrowLeftButton onClick={goBack}>
-            <ArrowLeftCircle />
+            <ArrowLeftImage />
           </ArrowLeftButton>
         )}
         {index === lastIndex && <RightPlantWrapper />}
         {index < lastIndex && (
           <ArrowRightButton onClick={goNext}>
-            <ArrowRightCircle />
+            <ArrowRightImage />
           </ArrowRightButton>
         )}
       </ScrollBarWrapper>

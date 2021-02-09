@@ -9,7 +9,7 @@ type Props = {
 };
 
 const CompanyWrapper = styled.div`
-  padding-top: ${({ theme }) => theme.paddingSpace};
+  padding-top: 32px;
   padding-bottom: ${({ theme }) => theme.paddingSpace};
   width: 80%;
   @media ${screenDimensions.smScreen} {

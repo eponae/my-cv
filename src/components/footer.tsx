@@ -35,7 +35,7 @@ const Footer = () => {
       <FooterText>
         <FooterTitle>Alice Rimassa CV 2021</FooterTitle>
         <FooterDesign
-          href="https://fr.linkedin.com/in/mariannehirsch"
+          href="https://www.linkedin.com/in/mariannehirsch"
           target="_blank"
           rel="noreferrer noopener"
         >

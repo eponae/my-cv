@@ -54,7 +54,7 @@ const TaskList = styled.ul`
 
 const Task = styled.li`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding-bottom: 8px;
 `;
 

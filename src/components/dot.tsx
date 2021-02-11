@@ -17,6 +17,7 @@ const DotWrapper = styled.div<Props>`
   background-color: ${({ theme, hasContactColor }) =>
     hasContactColor ? theme.colors.lightBlue : theme.colors.orange};
   margin-right: 8px;
+  margin-top: 5px;
 `;
 
 const Dot: FC<Props> = ({ hasContactColor = false }) => {

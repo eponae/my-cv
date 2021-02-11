@@ -20,7 +20,7 @@ const ScrollBarWrapper = styled.div`
   position: relative;
   height: 35px;
   @media ${screenDimensions.smScreen} {
-    width: 94%;
+    width: 80%;
   }
 `;
 

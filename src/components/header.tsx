@@ -104,9 +104,8 @@ const Header: FC = () => {
   return (
     <HeaderWrapper>
       <TitleName>{basics.name}</TitleName>
-      <TitleJob>
-        {basics.job} · {basics.mode}
-      </TitleJob>
+      <TitleJob>{basics.job}</TitleJob>
+      <TitleJob>{basics.mode}</TitleJob>
       <ContactList>
         {contact.list.map((link) => (
           <Contact key={`${link.id}`}>

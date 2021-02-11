@@ -80,6 +80,23 @@
         ]
       },
       {
+        "id": "asso",
+        "company": {
+          "name": "Associations"
+        },
+        "experiences": [
+          {
+            "job": "Membre",
+            "date": "2006 et 2019",
+            "tasks": [
+              "Participation à des actions de collecte de fonds pour Action contre la faim",
+              "Mentorat pour des jeunes en reconversion professionnelle vers le développement Web"
+            ],
+            "environment": []
+          }
+        ]
+      },
+      {
         "id": "mediametrie",
         "company": {
           "name": "Médiamétrie",
@@ -89,28 +106,11 @@
         "experiences": [
           {
             "job": "Stagiaire",
-            "date": "5 mois",
+            "date": "2014 · 5 mois",
             "tasks": [
               "Développement d'un logiciel de mesure d'audience en temps réel sur Windows"
             ],
             "environment": ["C++"]
-          }
-        ]
-      },
-      {
-        "id": "nagra",
-        "company": {
-          "name": "Nagra Media UK",
-          "description": "Spécialiste dans la sécurité et la création de solutions pour les médias"
-        },
-        "experiences": [
-          {
-            "job": "Stagiaire",
-            "date": "2 mois",
-            "tasks": [
-              "Tests utilisateurs et tests unitaires en JavaScript sur des interfaces pour la télévision au Pays de Galles"
-            ],
-            "environment": []
           }
         ]
       },
@@ -124,7 +124,7 @@
         "experiences": [
           {
             "job": "Responsable",
-            "date": "1 an",
+            "date": "2014 · 1 an",
             "tasks": [
               "Gestion administrative et organisation d'événements pour une association étudiante"
             ],
@@ -133,17 +133,17 @@
         ]
       },
       {
-        "id": "asso",
+        "id": "nagra",
         "company": {
-          "name": "Associations"
+          "name": "Nagra Media UK",
+          "description": "Spécialiste dans la sécurité et la création de solutions pour les médias"
         },
         "experiences": [
           {
-            "job": "Membre",
-            "date": "1 an",
+            "job": "Stagiaire",
+            "date": "2013 · 2 mois",
             "tasks": [
-              "Participation à des actions de collecte de fonds pour Action contre la faim",
-              "Mentorat pour des jeunes en reconversion professionnelle vers le développement Web"
+              "Tests utilisateurs et tests unitaires en JavaScript sur des interfaces pour la télévision au Pays de Galles"
             ],
             "environment": []
           }

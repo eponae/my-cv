@@ -13,11 +13,11 @@ const Skill = styled.p`
 
 const Skills: FC = () => {
   const {
-    allDataJson: { nodes },
+    allFrJson: { nodes },
   } = useStaticQuery(
     graphql`
       query {
-        allDataJson {
+        allFrJson {
           nodes {
             skills {
               title

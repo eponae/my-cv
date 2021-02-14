@@ -1,0 +1,16 @@
+{
+  "contact": {
+    "list": [
+      {
+        "id": "github",
+        "name": "Github",
+        "link": "https://github.com/eponae"
+      },
+      {
+        "id": "linkedin",
+        "name": "Linkedin",
+        "link": "https://fr.linkedin.com/in/arimassa"
+      }
+    ]
+  }
+}

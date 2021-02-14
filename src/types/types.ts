@@ -26,6 +26,10 @@ export type ContactType = {
   list: Array<{ id: string; name: string; link: string }>;
 };
 
+export type LanguageType = {
+  description: string;
+};
+
 export type BasicsType = {
   caption: string;
   job: string;
@@ -36,6 +40,13 @@ export type BasicsType = {
   title: string;
   location: string;
   mode: string;
+};
+
+export type LightBasicsType = {
+  name: BasicsType['name'];
+  job: BasicsType['job'];
+  location: BasicsType['location'];
+  mode: BasicsType['mode'];
 };
 
 export type SkillsType = { list: Array<string>; title: string };

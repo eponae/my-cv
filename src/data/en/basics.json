@@ -1,0 +1,13 @@
+{
+  "basics": {
+    "caption": "Alice's resume",
+    "job": "Frontend developer",
+    "keywords": "Alice Rimassa,HTML,CSS,JavaScript,Resume,React,Web,Front,Engineer",
+    "name": "Alice Rimassa",
+    "description": "Frontend developer in Paris. Rigorous and motivated 🙂.",
+    "site": "https://eponae.fr",
+    "title": "Curriculum Vitae",
+    "location": "Paris",
+    "mode": "Full remote"
+  }
+}

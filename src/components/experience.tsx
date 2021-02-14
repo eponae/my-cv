@@ -8,11 +8,11 @@ import Scrollbar from './scrollbar';
 
 const Experience: FC = () => {
   const {
-    allDataJson: { nodes },
+    allFrJson: { nodes },
   } = useStaticQuery(
     graphql`
       query {
-        allDataJson {
+        allFrJson {
           nodes {
             experience {
               title

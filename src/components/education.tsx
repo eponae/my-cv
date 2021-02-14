@@ -46,11 +46,11 @@ const CertificateTitle = styled.span`
 
 const Education: FC = () => {
   const {
-    allDataJson: { nodes },
+    allFrJson: { nodes },
   } = useStaticQuery(
     graphql`
       query {
-        allDataJson {
+        allFrJson {
           nodes {
             education {
               languages {

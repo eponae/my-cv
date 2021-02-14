@@ -30,11 +30,11 @@ const Hobby = styled.li`
 
 const Hobbies: FC = () => {
   const {
-    allDataJson: { nodes },
+    allFrJson: { nodes },
   } = useStaticQuery(
     graphql`
       query {
-        allDataJson {
+        allFrJson {
           nodes {
             hobbies {
               title

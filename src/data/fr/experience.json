@@ -11,7 +11,7 @@
         },
         "experiences": [
           {
-            "job": "Développeuse Web Frontend",
+            "job": "Développeuse frontend",
             "date": "Janvier 2018 à Aujourd'hui · 3 ans",
             "tasks": [
               "Implémenter des fonctionnalités pour l'interface du système de recommandations et l'analyseur de documents",
@@ -73,7 +73,7 @@
             "job": "Stagiaire",
             "date": "Janvier à Juin 2015 · 6 mois",
             "tasks": [
-              "Développeuse Web sur une application de gestion des compétences des consultants en interne "
+              "Développeuse fullstack sur une application de gestion des compétences des consultants en interne "
             ],
             "environment": ["Neo 4J", "ElasticSearch"]
           }

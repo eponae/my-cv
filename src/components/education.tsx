@@ -1,11 +1,13 @@
 import React, { FC } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import { EducationType } from '../types/types';
-import { getNodeData } from '../utils/dataUtils';
 import styled from 'styled-components';
 import Section from './section';
 import Title from './title';
 import { screenDimensions } from './theme';
+
+type Props = {
+  education: EducationType;
+};
 
 const EducationWrapper = styled.div`
   display: flex;
@@ -44,41 +46,9 @@ const CertificateTitle = styled.span`
   padding-left: 8px;
 `;
 
-const Education: FC = () => {
-  const {
-    allFrJson: { nodes },
-  } = useStaticQuery(
-    graphql`
-      query {
-        allFrJson {
-          nodes {
-            education {
-              languages {
-                title
-                list {
-                  id
-                  title
-                }
-              }
-              certificates {
-                title
-                list {
-                  id
-                  year
-                  title
-                }
-              }
-            }
-          }
-        }
-      }
-    `,
-  );
-  const { education }: { education: EducationType } = getNodeData(
-    'education',
-    nodes,
-  );
+const Education: FC<Props> = ({ education }) => {
   const { languages, certificates } = education;
+
   return (
     <Section>
       <EducationWrapper>

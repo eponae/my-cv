@@ -1,43 +1,16 @@
 import React, { FC, useState } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import Company from './company';
-import { getNodeData } from '../utils/dataUtils';
 import Title from './title';
 import SectionWithBackground from './sectionWithBackground';
 import Scrollbar from './scrollbar';
+import { ExperienceType } from '../types/types';
 
-const Experience: FC = () => {
-  const {
-    allFrJson: { nodes },
-  } = useStaticQuery(
-    graphql`
-      query {
-        allFrJson {
-          nodes {
-            experience {
-              title
-              companies {
-                id
-                company {
-                  description
-                  link
-                  name
-                }
-                experiences {
-                  date
-                  environment
-                  job
-                  tasks
-                }
-              }
-            }
-          }
-        }
-      }
-    `,
-  );
-  const data = getNodeData('experience', nodes);
-  const { title, companies } = data.experience;
+type Props = {
+  experience: ExperienceType;
+};
+
+const Experience: FC<Props> = ({ experience }) => {
+  const { title, companies } = experience;
 
   const [selectedCompanyIndex, setSelectedCompanyIndex] = useState<number>(0);
 

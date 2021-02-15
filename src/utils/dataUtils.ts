@@ -2,8 +2,12 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { Language } from '../components/languageContext';
 import {
   ContactType,
+  EducationType,
+  ExperienceType,
+  HobbiesType,
   LanguageType,
   LightBasicsType,
+  SkillsType,
   SummaryType,
 } from '../types/types';
 
@@ -11,46 +15,40 @@ export function getNodeData(nodeKey: string, nodes: Array<any>) {
   return nodes.find((node) => !!node[nodeKey]);
 }
 
-export const HeaderFragment = graphql`
-  fragment HeaderFragment on FrJson {
-    summary {
-      description
-    }
-    contact {
-      list {
-        id
-        link
-        name
-      }
-    }
-    basics {
-      name
-      job
-      location
-      mode
-    }
-    language {
-      description
-    }
-  }
-`;
-
 export function getSiteData(lang: Language) {
   const results = useStaticQuery(
     graphql`
-      query {
+      query GetData {
         allFrJson {
           nodes {
-            ...HeaderFragment
+            ...HeaderFrFragment
+            ...EducationFrFragment
+            ...ExperienceFrFragment
+            ...SkillsFrFragment
+            ...HobbiesFrFragment
+          }
+        }
+        allEnJson {
+          nodes {
+            ...HeaderEnFragment
+            ...EducationEnFragment
+            ...ExperienceEnFragment
+            ...SkillsEnFragment
+            ...HobbiesEnFragment
           }
         }
       }
     `,
   );
+
   const nodes =
     lang === 'en' ? results.allEnJson.nodes : results.allFrJson.nodes;
   const { summary }: { summary: SummaryType } = getNodeData('summary', nodes);
   const { contact }: { contact: ContactType } = getNodeData('contact', nodes);
+  const { education }: { education: EducationType } = getNodeData(
+    'education',
+    nodes,
+  );
   const {
     basics,
   }: {
@@ -60,6 +58,21 @@ export function getSiteData(lang: Language) {
     'language',
     nodes,
   );
+  const { experience }: { experience: ExperienceType } = getNodeData(
+    'experience',
+    nodes,
+  );
+  const { skills }: { skills: SkillsType } = getNodeData('skills', nodes);
+  const { hobbies }: { hobbies: HobbiesType } = getNodeData('hobbies', nodes);
 
-  return { summary, contact, basics, language };
+  return {
+    summary,
+    contact,
+    basics,
+    language,
+    education,
+    experience,
+    skills,
+    hobbies,
+  };
 }

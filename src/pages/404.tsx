@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import SEO from '../components/seo';
 
 const NotFoundPage = () => (

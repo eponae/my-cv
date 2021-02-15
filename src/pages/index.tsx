@@ -13,7 +13,16 @@ import { getSiteData } from '../utils/dataUtils';
 
 const IndexPage = () => {
   const [lang, setLang] = useState<Language>(defaultLanguage);
-  const { summary, contact, basics, language } = getSiteData(lang);
+  const {
+    summary,
+    contact,
+    basics,
+    language,
+    education,
+    experience,
+    skills,
+    hobbies,
+  } = getSiteData(lang);
 
   return (
     <LanguageContext.Provider value={lang}>
@@ -23,7 +32,7 @@ const IndexPage = () => {
           data={{ summary, contact, basics, language }}
         />
         <SEO />
-        <Content />
+        <Content data={{ education, experience, skills, hobbies }} />
         <Footer />
       </Theme>
     </LanguageContext.Provider>

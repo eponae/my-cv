@@ -1,7 +1,5 @@
 import React, { FC } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import { SkillsType } from '../types/types';
-import { getNodeData } from '../utils/dataUtils';
 import styled from 'styled-components';
 import Title from './title';
 import Section from './section';
@@ -11,24 +9,11 @@ const Skill = styled.p`
   color: ${({ theme }) => theme.colors.orange};
 `;
 
-const Skills: FC = () => {
-  const {
-    allFrJson: { nodes },
-  } = useStaticQuery(
-    graphql`
-      query {
-        allFrJson {
-          nodes {
-            skills {
-              title
-              list
-            }
-          }
-        }
-      }
-    `,
-  );
-  const { skills }: { skills: SkillsType } = getNodeData('skills', nodes);
+type Props = {
+  skills: SkillsType;
+};
+
+const Skills: FC<Props> = ({ skills }) => {
   return (
     <Section>
       <Title>{skills.title}</Title>

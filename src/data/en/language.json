@@ -1,5 +1,7 @@
 {
   "language": {
-    "description": "Switch to french"
+    "description": "Switch to french",
+    "print": "Print",
+    "seeMore": "Return to website to see more experience"
   }
 }

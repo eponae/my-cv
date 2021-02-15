@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 import Ida from '../images/ida.svg';
+import { BasicsType } from '../types/types';
 import { screenDimensions } from './theme';
+
+type Props = {
+  footer: BasicsType['footer'];
+};
 
 const FooterWrapper = styled.footer`
   display: flex;
@@ -12,6 +17,10 @@ const FooterWrapper = styled.footer`
   @media ${screenDimensions.smScreen} {
     max-width: 90%;
   }
+  @media print {
+    padding-top: ${({ theme }) => theme.printPaddingSpace};
+    padding-bottom: ${({ theme }) => theme.printPaddingSpace};
+  }
 `;
 
 const FooterText = styled.div`
@@ -19,7 +28,7 @@ const FooterText = styled.div`
 `;
 
 const FooterDesign = styled.a`
-  display: block;
+  display: inline-block;
   padding-bottom: 8px;
 `;
 
@@ -28,21 +37,24 @@ const FooterTitle = styled.p`
   padding-bottom: 8px;
 `;
 
-const Footer = () => {
+const Footer: FC<Props> = ({ footer }) => {
+  const { title, mention, build } = footer;
   return (
     <FooterWrapper>
       <Ida />
       <FooterText>
-        <FooterTitle>Alice Rimassa CV 2021</FooterTitle>
+        <FooterTitle>{title}</FooterTitle>
+        {mention}
+        {` `}
         <FooterDesign
           href="https://www.linkedin.com/in/mariannehirsch"
           target="_blank"
           rel="noreferrer noopener"
         >
-          Design par Marianne Hirsch
+          Marianne Hirsch
         </FooterDesign>
         <p>
-          Créé avec
+          {build}
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </p>

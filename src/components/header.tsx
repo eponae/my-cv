@@ -12,7 +12,6 @@ import Dot from './dot';
 import { defaultLanguage, Language, LanguageContext } from './languageContext';
 
 type Props = {
-  setLang: (lang: Language) => void;
   data: {
     summary: SummaryType;
     basics: LightBasicsType;
@@ -28,6 +27,10 @@ const HeaderWrapper = styled.header`
   @media ${screenDimensions.smScreen} {
     max-width: 90%;
   }
+  @media print {
+    padding-top: ${({ theme }) => theme.printPaddingSpace};
+    padding-bottom: ${({ theme }) => theme.printPaddingSpace};
+  }
 `;
 
 const Contact = styled.li`
@@ -39,7 +42,10 @@ const Contact = styled.li`
 const ContactList = styled.ul`
   display: flex;
   list-style-position: inside;
-  padding: 32px 0;
+  padding: 24px 0 0;
+  @media print {
+    display: none;
+  }
 `;
 
 const TitleName = styled.h1`
@@ -57,9 +63,13 @@ const TitleJob = styled.h2`
 const Summary = styled.div`
   max-width: 625px;
   padding-right: 42px;
+  padding-top: 24px;
   @media ${screenDimensions.smScreen} {
     max-width: unset;
     padding-right: 0;
+  }
+  @media print {
+    padding-top: 16px;
   }
 `;
 
@@ -86,32 +96,46 @@ const TitleHeader = styled.div`
   }
 `;
 
-const SwitchLangButton = styled.button`
+const HeaderButton = styled.button`
   font-weight: 400;
   font-size: 16px;
   text-decoration: underline;
-  color: #191970;
+  color: ${({ theme }) => theme.colors.darkBlue};
+`;
+
+const HeaderActions = styled.div`
+  @media print {
+    display: none;
+  }
 `;
 
 const Header: FC<Props> = ({
-  setLang,
   data: { summary, language, basics, contact },
 }) => {
-  const currentLanguage = useContext(LanguageContext);
+  const { lang, setLang, setSelectedCompanyIndex } = useContext(
+    LanguageContext,
+  );
   const switchLanguage = () => {
-    if (currentLanguage === defaultLanguage) {
+    if (lang === defaultLanguage) {
       return setLang('en');
     }
     return setLang(defaultLanguage);
+  };
+  const printAll = () => {
+    setSelectedCompanyIndex(0);
+    setTimeout(() => window.print());
   };
 
   return (
     <HeaderWrapper>
       <TitleHeader>
         <TitleName>{basics.name}</TitleName>
-        <SwitchLangButton onClick={switchLanguage}>
-          {language.description}
-        </SwitchLangButton>
+        <HeaderActions>
+          <HeaderButton onClick={switchLanguage}>
+            {language.description}
+          </HeaderButton>{' '}
+          · <HeaderButton onClick={printAll}>{language.print}</HeaderButton>
+        </HeaderActions>
       </TitleHeader>
       <TitleJob>{basics.job}</TitleJob>
       <TitleJob>{basics.mode}</TitleJob>

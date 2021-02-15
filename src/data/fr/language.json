@@ -1,5 +1,7 @@
 {
   "language": {
-    "description": "Traduire en anglais"
+    "description": "Traduire en anglais",
+    "print": "Imprimer",
+    "seeMore": "Retourner sur le site pour voir plus d'expériences"
   }
 }

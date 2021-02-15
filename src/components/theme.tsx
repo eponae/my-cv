@@ -16,10 +16,12 @@ const theme = {
     black: '#000',
     orange: '#e0694e',
     lightBlue: '#87b9e7',
+    darkBlue: '#191970',
     orangeBackground: '#fef9f8',
   },
   maxContentWidth: '800px',
   paddingSpace: '24px',
+  printPaddingSpace: '8px',
 };
 
 export type ThemeType = typeof theme;

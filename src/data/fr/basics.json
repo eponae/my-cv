@@ -8,6 +8,11 @@
     "site": "https://eponae.fr",
     "title": "Curriculum Vitae",
     "location": "Paris",
-    "mode": "6 ans d'expérience - 100% télétravail"
+    "mode": "6 ans d'expérience · 100% télétravail",
+    "footer": {
+      "title": "Alice Rimassa CV 2021",
+      "mention": "Design par",
+      "build": "Créé avec"
+    }
   }
 }

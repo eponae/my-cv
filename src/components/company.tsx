@@ -15,6 +15,10 @@ const CompanyWrapper = styled.div`
   @media ${screenDimensions.smScreen} {
     width: 100%;
   }
+  @media print {
+    padding-top: ${({ theme }) => theme.printPaddingSpace};
+    padding-bottom: ${({ theme }) => theme.printPaddingSpace};
+  }
 `;
 
 const CompanyName = styled.a`

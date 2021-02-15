@@ -22,6 +22,9 @@ const ScrollBarWrapper = styled.div`
   @media ${screenDimensions.smScreen} {
     width: 80%;
   }
+  @media print {
+    display: none;
+  }
 `;
 
 const LeftPlantWrapper = styled(Plant)`

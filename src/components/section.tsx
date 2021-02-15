@@ -9,6 +9,10 @@ const SectionWrapper = styled.section`
   @media ${screenDimensions.smScreen} {
     max-width: 90%;
   }
+  @media print {
+    padding-top: ${({ theme }) => theme.printPaddingSpace};
+    padding-bottom: ${({ theme }) => theme.printPaddingSpace};
+  }
 `;
 
 const Section: FC = ({ children }) => {

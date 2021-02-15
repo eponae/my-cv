@@ -7,6 +7,12 @@ const SectionBackgroundWrapper = styled.section`
   padding: 48px 0;
   margin-top: ${({ theme }) => theme.paddingSpace};
   margin-bottom: ${({ theme }) => theme.paddingSpace};
+  @media print {
+    margin-top: ${({ theme }) => theme.printPaddingSpace};
+    margin-bottom: ${({ theme }) => theme.printPaddingSpace};
+    padding-top: ${({ theme }) => theme.printPaddingSpace};
+    padding-bottom: ${({ theme }) => theme.printPaddingSpace};
+  }
 `;
 
 const SectionContent = styled.div`

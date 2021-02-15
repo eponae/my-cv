@@ -3,6 +3,7 @@ import {
   EducationType,
   ExperienceType,
   HobbiesType,
+  LanguageType,
   SkillsType,
 } from '../types/types';
 import Education from './education';
@@ -16,15 +17,16 @@ type Props = {
     experience: ExperienceType;
     hobbies: HobbiesType;
     skills: SkillsType;
+    seeMore: LanguageType['seeMore'];
   };
 };
 
 const Content: FC<Props> = ({
-  data: { education, experience, hobbies, skills },
+  data: { education, experience, hobbies, skills, seeMore },
 }) => (
   <>
     <Skills skills={skills} />
-    <Experience experience={experience} />
+    <Experience experience={experience} seeMore={seeMore} />
     <Education education={education} />
     <Hobbies hobbies={hobbies} />
   </>

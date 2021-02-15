@@ -8,6 +8,11 @@
     "site": "https://eponae.fr",
     "title": "Curriculum Vitae",
     "location": "Paris",
-    "mode": "6 years of work experience - Full remote"
+    "mode": "6 years of work experience · Full remote",
+    "footer": {
+      "title": "Alice Rimassa's resume 2021",
+      "mention": "Design by",
+      "build": "Created with"
+    }
   }
 }

@@ -17,9 +17,16 @@ export const HeaderFrFragment = graphql`
       job
       location
       mode
+      footer {
+        title
+        mention
+        build
+      }
     }
     language {
       description
+      print
+      seeMore
     }
   }
 `;
@@ -41,9 +48,16 @@ export const HeaderEnFragment = graphql`
       job
       location
       mode
+      footer {
+        title
+        mention
+        build
+      }
     }
     language {
       description
+      print
+      seeMore
     }
   }
 `;

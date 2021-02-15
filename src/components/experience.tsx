@@ -1,18 +1,32 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useContext } from 'react';
 import Company from './company';
 import Title from './title';
 import SectionWithBackground from './sectionWithBackground';
 import Scrollbar from './scrollbar';
-import { ExperienceType } from '../types/types';
+import { ExperienceType, LanguageType } from '../types/types';
+import { LanguageContext } from './languageContext';
+import styled from 'styled-components';
 
 type Props = {
   experience: ExperienceType;
+  seeMore: LanguageType['seeMore'];
 };
 
-const Experience: FC<Props> = ({ experience }) => {
-  const { title, companies } = experience;
+const PrintInformation = styled.div`
+  display: none;
+  @media print {
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    color: ${({ theme }) => theme.colors.darkBlue};
+  }
+`;
 
-  const [selectedCompanyIndex, setSelectedCompanyIndex] = useState<number>(0);
+const Experience: FC<Props> = ({ experience, seeMore }) => {
+  const { title, companies } = experience;
+  const { selectedCompanyIndex, setSelectedCompanyIndex } = useContext(
+    LanguageContext,
+  );
 
   const goBack = () => {
     if (selectedCompanyIndex > 0) {
@@ -39,6 +53,7 @@ const Experience: FC<Props> = ({ experience }) => {
         key={companies[selectedCompanyIndex].id}
         company={companies[selectedCompanyIndex]}
       />
+      <PrintInformation>{seeMore}</PrintInformation>
     </SectionWithBackground>
   );
 };

@@ -3,7 +3,7 @@
     "languages": {
       "title": "Languages",
       "list": [
-        { "id": "fr", "title": "French" },
+        { "id": "fr", "title": "French (native)" },
         { "id": "en", "title": "English" }
       ]
     },

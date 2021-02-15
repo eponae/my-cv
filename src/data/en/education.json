@@ -1,0 +1,31 @@
+{
+  "education": {
+    "languages": {
+      "title": "Languages",
+      "list": [
+        { "id": "fr", "title": "Native French" },
+        { "id": "en", "title": "Professional English" }
+      ]
+    },
+    "certificates": {
+      "title": "Education",
+      "list": [
+        {
+          "id": "ing",
+          "year": 2015,
+          "title": "Engineer ESIEA's diploma"
+        },
+        {
+          "id": "toeic",
+          "year": 2014,
+          "title": "TOEIC 890"
+        },
+        {
+          "id": "bac",
+          "year": 2010,
+          "title": "High school graduation"
+        }
+      ]
+    }
+  }
+}

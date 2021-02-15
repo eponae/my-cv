@@ -1,0 +1,16 @@
+{
+  "hobbies": {
+    "title": "Interests",
+    "list": [
+      {
+        "id": "horse",
+        "name": "Horse riding"
+      },
+
+      {
+        "id": "sew",
+        "name": "Sewing"
+      }
+    ]
+  }
+}

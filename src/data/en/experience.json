@@ -1,0 +1,152 @@
+{
+  "experience": {
+    "title": "Work experience",
+    "companies": [
+      {
+        "id": "doctrine",
+        "company": {
+          "name": "Doctrine",
+          "description": "French legal platform",
+          "link": "https://doctrine.fr"
+        },
+        "experiences": [
+          {
+            "job": "Frontend developer",
+            "date": "January 2018 to nowadays · 3 years",
+            "tasks": [
+              "Implement new functionalities for the user interface on the recommendation system and the document analyzer.",
+              "Work on good practices with the team and spread it through the application code : tests, React and Javascript community standards.",
+              "Work on code refactoring : Angular to React, Sass BEM to Css modules, Flow to Typescript.",
+              "Facilitate coordination between designers and developers.",
+              "Work on the design system implementation.",
+              "Work on product conception and take part in team meetings."
+            ],
+            "environment": [
+              "React JS",
+              "CSS Modules",
+              "Typescript",
+              "SCSS",
+              "Webpack",
+              "Cypress",
+              "Jest",
+              "Git",
+              "REST",
+              "Npm"
+            ]
+          },
+          {
+            "job": "Squad lead",
+            "date": "April 2018 to October 2019 · 1 year and a half",
+            "tasks": [
+              "Lead a team of 3 to 7 people.",
+              "Facilitate projects delivery.",
+              "Make sure the product manager, the team manager and the developers are well coordinated.",
+              "Facilitate team meetings : daily stand-up, retrospective and moving motivators workshop.",
+              "Work on team building."
+            ],
+            "environment": ["Kanban", "Jira", "Slack"]
+          }
+        ]
+      },
+      {
+        "id": "zenika",
+        "company": {
+          "name": "Zenika",
+          "description": "Consulting in software architecture and agile methods",
+          "link": "https://www.zenika.com"
+        },
+        "experiences": [
+          {
+            "job": "Web consultant",
+            "date": "July 2015 to January 2018 · 2 years and a half",
+            "tasks": [
+              "3 months at Artel as a frontend developer working on a web application that handles data collected by connected cars",
+              "3 months at Ocea Smart Building as web developer working on an application that handles real estate",
+              "10 months at Allianz as a frontend developer on a product that computes insurance offers, international team",
+              "3 months at EDF as a frontend developer to do research and development on data coming from nuclear power stations",
+              "6 months at Texa Group as a web developer to work on an application that manages accident for insurance"
+            ],
+            "environment": ["Angular JS", "Scrum", "Highcharts"]
+          },
+          {
+            "job": "Intern",
+            "date": "January to June 2015 · 6 months",
+            "tasks": [
+              "Web development for an application that handles consultant skills"
+            ],
+            "environment": ["Neo 4J", "ElasticSearch"]
+          }
+        ]
+      },
+      {
+        "id": "asso",
+        "company": {
+          "name": "Associations"
+        },
+        "experiences": [
+          {
+            "job": "Member",
+            "date": "2006 to 2021",
+            "tasks": [
+              "Time for the planet in 2021 : financial contribution",
+              "_blank in 2019 : mentoring of junior developers looking for a career change",
+              "Action against hunger in 2006 : participate to fundraising with the help of local store keepers."
+            ],
+            "environment": []
+          }
+        ]
+      },
+      {
+        "id": "mediametrie",
+        "company": {
+          "name": "Mediametrie",
+          "description": "Media audience insights and analysis",
+          "link": "https://www.mediametrie.fr"
+        },
+        "experiences": [
+          {
+            "job": "Intern",
+            "date": "2014 · 5 months",
+            "tasks": ["Build a software that measures TV audience on Windows."],
+            "environment": ["C++"]
+          }
+        ]
+      },
+      {
+        "id": "esiea",
+        "company": {
+          "name": "ESIEA",
+          "description": "Graduate school of engineering",
+          "link": "https://www.esiea.fr"
+        },
+        "experiences": [
+          {
+            "job": "Member",
+            "date": "2014 · 1 year",
+            "tasks": [
+              "Administrative management and events organization in a student association"
+            ],
+            "environment": []
+          }
+        ]
+      },
+      {
+        "id": "nagra",
+        "company": {
+          "name": "Nagra Media UK",
+          "description": "Digital media technology services"
+        },
+        "experiences": [
+          {
+            "job": "Intern",
+            "date": "2013 · 2 months",
+            "tasks": [
+              "User and unit tests in Javascript on interfaces for television in Wales"
+            ],
+            "environment": []
+          }
+        ]
+      }
+    ]
+  }
+}

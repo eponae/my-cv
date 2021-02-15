@@ -1,7 +1,5 @@
 import React, { FC } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import { HobbiesType } from '../types/types';
-import { getNodeData } from '../utils/dataUtils';
 import Title from './title';
 import SectionWithBackground from './sectionWithBackground';
 import Horse from '../images/horse.svg';
@@ -28,27 +26,11 @@ const Hobby = styled.li`
   padding-bottom: 8px;
 `;
 
-const Hobbies: FC = () => {
-  const {
-    allDataJson: { nodes },
-  } = useStaticQuery(
-    graphql`
-      query {
-        allDataJson {
-          nodes {
-            hobbies {
-              title
-              list {
-                id
-                name
-              }
-            }
-          }
-        }
-      }
-    `,
-  );
-  const { hobbies }: { hobbies: HobbiesType } = getNodeData('hobbies', nodes);
+type Props = {
+  hobbies: HobbiesType;
+};
+
+const Hobbies: FC<Props> = ({ hobbies }) => {
   return (
     <SectionWithBackground>
       <HobbiesWrapper>

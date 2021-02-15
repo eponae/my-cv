@@ -1,11 +1,25 @@
-import { graphql, useStaticQuery } from 'gatsby';
-import React, { FC } from 'react';
+import React, { FC, useContext } from 'react';
 import styled from 'styled-components';
-import { BasicsType, ContactType, SummaryType } from '../types/types';
-import { getNodeData } from '../utils/dataUtils';
+import {
+  ContactType,
+  LanguageType,
+  LightBasicsType,
+  SummaryType,
+} from '../types/types';
 import Ida from '../images/ida-plant.svg';
 import { screenDimensions } from './theme';
 import Dot from './dot';
+import { defaultLanguage, Language, LanguageContext } from './languageContext';
+
+type Props = {
+  setLang: (lang: Language) => void;
+  data: {
+    summary: SummaryType;
+    basics: LightBasicsType;
+    language: LanguageType;
+    contact: ContactType;
+  };
+};
 
 const HeaderWrapper = styled.header`
   padding: ${({ theme }) => `48px 0 ${theme.paddingSpace}`};
@@ -59,51 +73,46 @@ const IdaWrapper = styled(Ida)`
   }
 `;
 
-const Header: FC = () => {
-  const {
-    allDataJson: { nodes },
-  } = useStaticQuery(
-    graphql`
-      query {
-        allDataJson {
-          nodes {
-            summary {
-              description
-            }
-            contact {
-              list {
-                id
-                link
-                name
-              }
-            }
-            basics {
-              name
-              job
-              location
-              mode
-            }
-          }
-        }
-      }
-    `,
-  );
-  const { summary }: { summary: SummaryType } = getNodeData('summary', nodes);
-  const { contact }: { contact: ContactType } = getNodeData('contact', nodes);
-  const {
-    basics,
-  }: {
-    basics: {
-      name: BasicsType['name'];
-      job: BasicsType['job'];
-      location: BasicsType['location'];
-      mode: BasicsType['mode'];
-    };
-  } = getNodeData('basics', nodes);
+const TitleHeader = styled.div`
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  @media ${screenDimensions.smScreen} {
+    flex-flow: column-reverse nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+`;
+
+const SwitchLangButton = styled.button`
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: underline;
+  color: #191970;
+`;
+
+const Header: FC<Props> = ({
+  setLang,
+  data: { summary, language, basics, contact },
+}) => {
+  const currentLanguage = useContext(LanguageContext);
+  const switchLanguage = () => {
+    if (currentLanguage === defaultLanguage) {
+      return setLang('en');
+    }
+    return setLang(defaultLanguage);
+  };
 
   return (
     <HeaderWrapper>
-      <TitleName>{basics.name}</TitleName>
+      <TitleHeader>
+        <TitleName>{basics.name}</TitleName>
+        <SwitchLangButton onClick={switchLanguage}>
+          {language.description}
+        </SwitchLangButton>
+      </TitleHeader>
       <TitleJob>{basics.job}</TitleJob>
       <TitleJob>{basics.mode}</TitleJob>
       <ContactList>

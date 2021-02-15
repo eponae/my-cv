@@ -8,11 +8,7 @@ type Props = {
   lang?: 'fr' | 'en';
 };
 
-const SEO: FC<Props> = ({
-  description = '',
-  lang = 'fr',
-  meta = [],
-}) => {
+const SEO: FC<Props> = ({ description = '', lang = 'fr', meta = [] }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -28,15 +24,15 @@ const SEO: FC<Props> = ({
   );
 
   const metaDescription = description || site.siteMetadata.description;
-  const title = 'Alice Rimassa CV';
+  const title = site.siteMetadata.title;
   return (
     <Helmet
       htmlAttributes={{
         lang,
-        title
+        title,
       }}
       title={title}
-      titleTemplate={`${site.siteMetadata.title}`}
+      titleTemplate={title}
       meta={[
         {
           name: `description`,

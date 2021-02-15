@@ -1,25 +1,25 @@
 {
   "experience": {
-    "title": "Expériences professionnelles",
+    "title": "Work experience",
     "companies": [
       {
         "id": "doctrine",
         "company": {
           "name": "Doctrine",
-          "description": "Plateforme d'information juridique",
+          "description": "French legal platform",
           "link": "https://doctrine.fr"
         },
         "experiences": [
           {
-            "job": "Développeuse Web Frontend",
-            "date": "Janvier 2018 à Aujourd'hui · 3 ans",
+            "job": "Frontend developer",
+            "date": "January 2018 to nowadays · 3 years",
             "tasks": [
-              "Implémenter des fonctionnalités pour l'interface du système de recommandations et l'analyseur de documents",
-              "Élaborer et diffuser les bonnes pratiques en équipe: standards de la communauté Javascript",
-              "Participer aux migrations : Angular vers React, Sass BEM vers CSS modules et Flow vers Typescript",
-              "Faciliter la coordination entre les développeurs et les designers",
-              "Participer à l’implémentation du design system",
-              "Participer aux rituels d'équipe et à la conception du produit"
+              "Implement new functionalities for the user interface on the recommendation system and the document analyzer.",
+              "Work on good practices with the team and spread it through the application code : tests, React and Javascript community standards.",
+              "Work on code refactoring : Angular to React, Sass BEM to Css modules, Flow to Typescript.",
+              "Facilitate coordination between designers and developers.",
+              "Work on the design system implementation.",
+              "Work on product conception and take part in team meetings."
             ],
             "environment": [
               "React JS",
@@ -36,14 +36,13 @@
           },
           {
             "job": "Squad lead",
-            "date": "Avril 2018 à Octobre 2019 · 1 an et demi",
+            "date": "April 2018 to October 2019 · 1 year and a half",
             "tasks": [
-              "Gérer une équipe agile de 3 à 7 personnes",
-              "Faciliter le livraison des projets",
-              "Assurer une bonne coordination entre les développeurs, le responsable produit et le manageur",
-              "Animer les rituels: daily stand-up, retrospective et atelier motivation",
-              "Renforcer la cohésion d'équipe",
-              "Participer aux processus de recrutement"
+              "Lead a team of 3 to 7 people.",
+              "Facilitate projects delivery.",
+              "Make sure the product manager, the team manager and the developers are well coordinated.",
+              "Facilitate team meetings : daily stand-up, retrospective and moving motivators workshop.",
+              "Work on team building."
             ],
             "environment": ["Kanban", "Jira", "Slack"]
           }
@@ -53,27 +52,27 @@
         "id": "zenika",
         "company": {
           "name": "Zenika",
-          "description": "Cabinet de prestation spécialisé dans le Web",
+          "description": "Consulting in software architecture and agile methods",
           "link": "https://www.zenika.com"
         },
         "experiences": [
           {
-            "job": "Consultante Web",
-            "date": "Juillet 2015 à Janvier 2018 · 2 ans et demi",
+            "job": "Web consultant",
+            "date": "July 2015 to January 2018 · 2 years and a half",
             "tasks": [
-              "3 mois chez Artel sur une application de gestion de données remontées par des boîtiers connectés sur des flottes de voitures",
-              "3 mois chez Ocea Smart Building sur une application de gestion de patrimoine immobilier",
-              "10 mois chez Allianz sur une application B2B2C de conception des prix des offres d'assurances proposées aux clients",
-              "3 mois chez EDF R&D pour concevoir une application d'analyse de données des centrales nucléaires",
-              "6 mois chez Texa Groupe sur une application de gestion des sinistres dédiée aux assurances"
+              "3 months at Artel as a frontend developer working on a web application that handles data collected by connected cars",
+              "3 months at Ocea Smart Building as web developer working on an application that handles real estate",
+              "10 months at Allianz as a frontend developer on a product that computes insurance offers",
+              "3 months at EDF as a frontend developer to do research and development on data coming from nuclear power stations",
+              "6 months at Texa Group as a web developer to work on an application that manages accident for insurance"
             ],
             "environment": ["Angular JS", "Scrum", "Highcharts"]
           },
           {
             "job": "Stagiaire",
-            "date": "Janvier à Juin 2015 · 6 mois",
+            "date": "January to June 2015 · 6 months",
             "tasks": [
-              "Développeuse Web sur une application de gestion des compétences des consultants en interne "
+              "Web development for an application that handles consultant skills"
             ],
             "environment": ["Neo 4J", "ElasticSearch"]
           }
@@ -86,12 +85,12 @@
         },
         "experiences": [
           {
-            "job": "Membre",
-            "date": "2006 à 2021",
+            "job": "Member",
+            "date": "2006 to 2021",
             "tasks": [
-              "Action contre la faim : participation à des actions de collecte de fonds",
-              "_blank : mentorat pour des jeunes en reconversion professionnelle vers le développement Web",
-              "Time for the planet : participation financière à un projet pour le développement durable"
+              "Time for the planet in 2021 : financial contribution",
+              "_blank in 2019 : mentoring of junior developers looking for a career change",
+              "Action against hunger in 2006 : participate to fundraising with the help of local store keepers."
             ],
             "environment": []
           }
@@ -100,17 +99,15 @@
       {
         "id": "mediametrie",
         "company": {
-          "name": "Médiamétrie",
-          "description": "Calculs d'audience et études marketing des médias",
+          "name": "Mediametrie",
+          "description": "Media audience insights and analysis",
           "link": "https://www.mediametrie.fr"
         },
         "experiences": [
           {
-            "job": "Stagiaire",
-            "date": "2014 · 5 mois",
-            "tasks": [
-              "Développement d'un logiciel de mesure d'audience en temps réel sur Windows"
-            ],
+            "job": "Intern",
+            "date": "2014 · 5 months",
+            "tasks": ["Build a software that measures TV audience on Windows."],
             "environment": ["C++"]
           }
         ]
@@ -119,15 +116,15 @@
         "id": "esiea",
         "company": {
           "name": "ESIEA",
-          "description": "École d'ingénieur(e)s du numérique",
+          "description": "Graduate school of engineering",
           "link": "https://www.esiea.fr"
         },
         "experiences": [
           {
-            "job": "Responsable",
-            "date": "2014 · 1 an",
+            "job": "Member",
+            "date": "2014 · 1 year",
             "tasks": [
-              "Gestion administrative et organisation d'événements pour une association étudiante"
+              "Administrative management and events organization in a student association"
             ],
             "environment": []
           }
@@ -137,14 +134,14 @@
         "id": "nagra",
         "company": {
           "name": "Nagra Media UK",
-          "description": "Spécialiste dans la sécurité et la création de solutions pour les médias"
+          "description": "Digital media technology services"
         },
         "experiences": [
           {
-            "job": "Stagiaire",
-            "date": "2013 · 2 mois",
+            "job": "Intern",
+            "date": "2013 · 2 months",
             "tasks": [
-              "Tests utilisateurs et tests unitaires en JavaScript sur des interfaces pour la télévision au Pays de Galles"
+              "User and unit tests in Javascript on interfaces for television in Wales"
             ],
             "environment": []
           }

@@ -3,8 +3,8 @@
     "languages": {
       "title": "Languages",
       "list": [
-        { "id": "fr", "title": "French (native)" },
-        { "id": "en", "title": "English" }
+        { "id": "fr", "title": "Native French" },
+        { "id": "en", "title": "Professional English" }
       ]
     },
     "certificates": {

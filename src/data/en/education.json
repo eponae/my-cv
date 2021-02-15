@@ -19,6 +19,11 @@
           "id": "toeic",
           "year": 2014,
           "title": "TOEIC 890"
+        },
+        {
+          "id": "bac",
+          "year": 2010,
+          "title": "High school graduation"
         }
       ]
     }

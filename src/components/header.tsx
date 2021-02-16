@@ -9,7 +9,7 @@ import {
 import Ida from '../images/ida-plant.svg';
 import { screenDimensions } from './theme';
 import Dot from './dot';
-import { defaultLanguage, Language, LanguageContext } from './languageContext';
+import { defaultLanguage, LanguageContext } from './languageContext';
 
 type Props = {
   data: {

@@ -9,5 +9,3 @@
 ## Available at
 
 [Eponae Domain](https://eponae.fr)
-
-Work in progress

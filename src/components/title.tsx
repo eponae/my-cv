@@ -6,7 +6,6 @@ const TitleWrapper = styled.h1`
   font-weight: bold;
   font-size: 26px;
   padding-bottom: 16px;
-  font-family: Source Serif Pro;
 `;
 
 const Title: FC = ({ children }) => <TitleWrapper>{children}</TitleWrapper>;

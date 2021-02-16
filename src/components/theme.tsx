@@ -27,6 +27,7 @@ const theme = {
 export type ThemeType = typeof theme;
 
 export const AppStyles = createGlobalStyle<{ theme: ThemeType }>`
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
   * {
     font-family: ${({ theme }) => theme.fontFamily};
   }

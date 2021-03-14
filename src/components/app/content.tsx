@@ -5,11 +5,11 @@ import {
   HobbiesType,
   LanguageType,
   SkillsType,
-} from '../types/types';
-import Education from './education';
-import Experience from './experience';
-import Hobbies from './hobbies';
-import Skills from './skills';
+} from '../../types/types';
+import Education from '../education';
+import Experience from '../experience';
+import Hobbies from '../hobbies';
+import Skills from '../skills';
 
 type Props = {
   data: {

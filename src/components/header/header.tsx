@@ -5,11 +5,11 @@ import {
   LanguageType,
   LightBasicsType,
   SummaryType,
-} from '../types/types';
-import Ida from '../images/ida-plant.svg';
-import { screenDimensions } from './theme';
-import Dot from './dot';
-import { defaultLanguage, LanguageContext } from './languageContext';
+} from '../../types/types';
+import Ida from '../../images/ida-plant.svg';
+import { screenDimensions } from '../app/theme';
+import Dot from '../common/dot';
+import { defaultLanguage, LanguageContext } from '../app/languageContext';
 
 type Props = {
   data: {

@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
-import Ida from '../images/ida.svg';
-import { BasicsType } from '../types/types';
-import { screenDimensions } from './theme';
+import Ida from '../../images/ida.svg';
+import { BasicsType } from '../../types/types';
+import { screenDimensions } from '../app/theme';
 
 type Props = {
   footer: BasicsType['footer'];

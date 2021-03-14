@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { SkillsType } from '../types/types';
 import styled from 'styled-components';
-import Title from './title';
-import Section from './section';
+import Title from './title/title';
+import Section from './section/section';
 
 const Skill = styled.p`
   font-weight: 600;

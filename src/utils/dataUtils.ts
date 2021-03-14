@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import { Language } from '../components/languageContext';
+import { Language } from '../components/app/languageContext';
 import {
   ContactType,
   EducationType,

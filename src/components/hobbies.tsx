@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import { HobbiesType } from '../types/types';
-import Title from './title';
-import SectionWithBackground from './sectionWithBackground';
+import Title from './title/title';
+import SectionWithBackground from './section/sectionWithBackground';
 import Horse from '../images/horse.svg';
 import styled from 'styled-components';
-import { screenDimensions } from './theme';
+import { screenDimensions } from './app/theme';
 
 const HorseWrapper = styled(Horse)`
   display: inline-block;

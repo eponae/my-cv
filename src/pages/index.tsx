@@ -1,6 +1,6 @@
 import React from 'react';
-import App from '../components/app';
-import AppProviders from '../components/appProviders';
+import App from '../components/app/app';
+import AppProviders from '../components/app/appProviders';
 
 const IndexPage = () => {
   return (

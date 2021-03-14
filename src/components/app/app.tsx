@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import Content from '../components/content';
-import Footer from '../components/footer';
-import Header from '../components/header';
-import { LanguageContext } from '../components/languageContext';
-import { getSiteData } from '../utils/dataUtils';
+import Content from './content';
+import Footer from '../footer/footer';
+import Header from '../header/header';
+import { LanguageContext } from './languageContext';
+import { getSiteData } from '../../utils/dataUtils';
 
 const App = () => {
   const { lang } = useContext(LanguageContext);

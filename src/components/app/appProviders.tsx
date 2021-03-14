@@ -1,11 +1,7 @@
 import React, { FC, useState } from 'react';
-import {
-  defaultLanguage,
-  Language,
-  LanguageContext,
-} from '../components/languageContext';
-import Theme from '../components/theme';
-import SEO from './seo';
+import { defaultLanguage, Language, LanguageContext } from './languageContext';
+import Theme from './theme';
+import SEO from '../seo';
 
 const AppProviders: FC = ({ children }) => {
   const [lang, setLang] = useState<Language>(defaultLanguage);

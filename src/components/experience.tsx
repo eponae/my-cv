@@ -1,10 +1,10 @@
 import React, { FC, useContext } from 'react';
 import Company from './company';
-import Title from './title';
-import SectionWithBackground from './sectionWithBackground';
-import Scrollbar from './scrollbar';
+import Title from './title/title';
+import SectionWithBackground from './section/sectionWithBackground';
+import Scrollbar from './common/scrollbar';
 import { ExperienceType, LanguageType } from '../types/types';
-import { LanguageContext } from './languageContext';
+import { LanguageContext } from './app/languageContext';
 import styled from 'styled-components';
 
 type Props = {

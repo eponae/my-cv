@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { CompanyType } from '../types/types';
-import Dot from './dot';
-import { screenDimensions } from './theme';
+import Dot from './common/dot';
+import { screenDimensions } from './app/theme';
 
 type Props = {
   company: CompanyType;

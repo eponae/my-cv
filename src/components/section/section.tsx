@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
-import { screenDimensions } from './theme';
+import { screenDimensions } from '../app/theme';
 
 const SectionWrapper = styled.section`
   padding: ${({ theme }) => `${theme.paddingSpace} 0`};

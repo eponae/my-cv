@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import { EducationType } from '../types/types';
 import styled from 'styled-components';
-import Section from './section';
-import Title from './title';
-import { screenDimensions } from './theme';
+import Section from './section/section';
+import Title from './title/title';
+import { screenDimensions } from './app/theme';
 
 type Props = {
   education: EducationType;

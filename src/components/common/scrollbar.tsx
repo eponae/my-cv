@@ -1,9 +1,9 @@
 import React, { FC, MouseEvent } from 'react';
 import styled from 'styled-components';
-import ArrowRightCircle from '../images/arrow-right-circle.svg';
-import ArrowLeftCircle from '../images/arrow-left-circle.svg';
-import Plant from '../images/plant.svg';
-import { screenDimensions } from './theme';
+import ArrowRightCircle from '../../images/arrow-right-circle.svg';
+import ArrowLeftCircle from '../../images/arrow-left-circle.svg';
+import Plant from '../../images/plant.svg';
+import { screenDimensions } from '../app/theme';
 
 type Props = {
   index: number;

@@ -2,10 +2,7 @@
 
 [Gatsby](https://www.gatsbyjs.org/)
 
-## Deployed with
+## Was deployed with
 
 [Vercel](https://vercel.com/)
 
-## Available at
-
-[Eponae Domain](https://eponae.fr)
